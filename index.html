@@ -97,6 +97,40 @@
             transform: translateY(-2px);
         }
         
+        /* Language Switcher */
+        .language-switcher {
+            margin-right: 15px;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .lang-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .lang-btn i {
+            margin-right: 5px;
+        }
+        
         /* Hero Section */
         .hero-section {
             background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
@@ -306,6 +340,16 @@
             .stat-number {
                 font-size: 2.5rem;
             }
+            
+            .language-switcher {
+                margin-right: 10px;
+                margin-left: auto;
+            }
+            
+            .lang-btn {
+                padding: 4px 8px;
+                font-size: 0.8rem;
+            }
         }
         
         /* Working Hours Badge */
@@ -329,9 +373,26 @@
             color: var(--secondary-blue);
             text-decoration: underline;
         }
+        
+        /* Language-specific styles */
+        .lang-cn .section-title {
+            font-weight: 600;
+        }
+        
+        .lang-cn .hero-title {
+            font-weight: 700;
+        }
+        
+        .lang-cn .stat-number {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .lang-cn h1, .lang-cn h2, .lang-cn h3, .lang-cn h4, .lang-cn h5 {
+            font-weight: 600;
+        }
     </style>
 </head>
-<body>
+<body class="lang-en">
     <!-- WhatsApp Floating Button -->
     <a href="https://wa.me/60128772713" class="whatsapp-float" target="_blank">
         <i class="bi bi-whatsapp"></i>
@@ -350,23 +411,30 @@
             
             <div class="collapse navbar-collapse" id="navbarNav">
                 <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Language Switcher -->
+                    <li class="nav-item language-switcher">
+                        <div class="d-flex">
+                            <button class="lang-btn active" id="lang-en-btn">
+                                <i class="bi bi-translate"></i> EN
+                            </button>
+                            <button class="lang-btn ms-2" id="lang-cn-btn">
+                                <i class="bi bi-translate"></i> 中文
+                            </button>
+                        </div>
+                    </li>
+                    
                     <li class="nav-item">
-                        <a class="nav-link" href="#home">Home</a>
+                        <a class="nav-link" href="#home" data-key="nav.home">Home</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#services">Services</a>
+                        <a class="nav-link" href="#services" data-key="nav.services">Services</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#about">About Us</a>
+                        <a class="nav-link" href="#about" data-key="nav.about">About Us</a>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
+                        <a class="nav-link" href="#contact" data-key="nav.contact">Contact</a>
                     </li>
-                    <!-- <li class="nav-item ms-3">
-                        <a href="tel:0128772713" class="nav-phone">
-                            <i class="bi bi-telephone me-1"></i> 012-877 2713
-                        </a>
-                    </li> -->
                 </ul>
             </div>
         </div>
@@ -377,13 +445,13 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-lg-6">
-                    <h1 class="hero-title">Enterprise-Level Cybersecurity & IT Infrastructure Specialists</h1>
-                    <p class="hero-subtitle">Future Mystic Tech Enterprise is a leading corporate IT solutions provider in Malaysia, specializing in building secure, reliable, and efficient digital infrastructure for SMEs. We offer end-to-end network security management, private server deployment, data protection, and professional technical support services.</p>
+                    <h1 class="hero-title" data-key="hero.title">Enterprise-Level Cybersecurity & IT Infrastructure Specialists</h1>
+                    <p class="hero-subtitle" data-key="hero.subtitle">Future Mystic Tech Enterprise is a leading corporate IT solutions provider in Malaysia, specializing in building secure, reliable, and efficient digital infrastructure for SMEs. We offer end-to-end network security management, private server deployment, data protection, and professional technical support services.</p>
                     <div class="d-flex flex-wrap gap-3">
-                        <a href="#contact" class="btn btn-light btn-lg px-4 py-3 fw-bold">
+                        <a href="#contact" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-key="hero.cta1">
                             <i class="bi bi-chat-left-text me-2"></i>Free Technical Consultation
                         </a>
-                        <a href="tel:0128772713" class="btn btn-outline-light btn-lg px-4 py-3">
+                        <a href="tel:0128772713" class="btn btn-outline-light btn-lg px-4 py-3" data-key="hero.cta2">
                             <i class="bi bi-telephone me-2"></i>Call Now for Consultation
                         </a>
                     </div>
@@ -395,9 +463,9 @@
                                 <div class="bg-primary rounded-circle p-2 me-3">
                                     <i class="bi bi-shield-check text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Enterprise-Level Security Protection</h5>
+                                <h5 class="mb-0" data-key="hero.feature1.title">Enterprise-Level Security Protection</h5>
                             </div>
-                            <p class="text-muted">Utilizing banking-grade security architecture, deploying next-generation firewalls, implementing zero-trust network access policies to comprehensively safeguard corporate data assets.</p>
+                            <p class="text-muted" data-key="hero.feature1.desc">Utilizing banking-grade security architecture, deploying next-generation firewalls, implementing zero-trust network access policies to comprehensively safeguard corporate data assets.</p>
                         </div>
                         
                         <div class="bg-white rounded-3 p-4 shadow-lg mt-4" data-aos="fade-left" data-aos-delay="400">
@@ -405,9 +473,9 @@
                                 <div class="bg-success rounded-circle p-2 me-3">
                                     <i class="bi bi-clock-history text-white"></i>
                                 </div>
-                                <h5 class="mb-0">Professional Rapid Response</h5>
+                                <h5 class="mb-0" data-key="hero.feature2.title">Professional Rapid Response</h5>
                             </div>
-                            <p class="text-muted">2-hour rapid response during working hours, priority handling of critical business system failures to minimize business interruption time.</p>
+                            <p class="text-muted" data-key="hero.feature2.desc">2-hour rapid response during working hours, priority handling of critical business system failures to minimize business interruption time.</p>
                         </div>
                     </div>
                 </div>
@@ -420,8 +488,8 @@
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title text-center">Enterprise-Level IT Solutions Services</h2>
-                    <p class="lead">We provide comprehensive enterprise IT infrastructure design, deployment, maintenance, and optimization services to ensure your business continuity and data security</p>
+                    <h2 class="section-title text-center" data-key="services.title">Enterprise-Level IT Solutions Services</h2>
+                    <p class="lead" data-key="services.subtitle">We provide comprehensive enterprise IT infrastructure design, deployment, maintenance, and optimization services to ensure your business continuity and data security</p>
                 </div>
             </div>
             
@@ -431,11 +499,11 @@
                         <div class="service-icon mx-auto">
                             <i class="bi bi-server"></i>
                         </div>
-                        <h4 class="mb-3">Private Server Solutions</h4>
-                        <p>Deploying high-performance private servers (Domain & Files Server) and accounting servers for enterprises, ensuring data autonomy and control to meet specific business requirements.</p>
+                        <h4 class="mb-3" data-key="services.item1.title">Private Server Solutions</h4>
+                        <p data-key="services.item1.desc">Deploying high-performance private servers (Domain & Files Server) and accounting servers for enterprises, ensuring data autonomy and control to meet specific business requirements.</p>
                         <div class="mt-4">
-                            <span class="badge bg-primary">Advertising Server</span>
-                            <span class="badge bg-primary ms-1">Accounting Server</span>
+                            <span class="badge bg-primary" data-key="services.item1.tag1">Advertising Server</span>
+                            <span class="badge bg-primary ms-1" data-key="services.item1.tag2">Accounting Server</span>
                         </div>
                     </div>
                 </div>
@@ -445,11 +513,11 @@
                         <div class="service-icon mx-auto">
                             <i class="bi bi-shield-lock"></i>
                         </div>
-                        <h4 class="mb-3">Network Security Architecture</h4>
-                        <p>Enterprise firewall deployment and configuration, VLAN network design and segregation, wireless network security hardening to prevent unauthorized access and data breaches.</p>
+                        <h4 class="mb-3" data-key="services.item2.title">Network Security Architecture</h4>
+                        <p data-key="services.item2.desc">Enterprise firewall deployment and configuration, VLAN network design and segregation, wireless network security hardening to prevent unauthorized access and data breaches.</p>
                         <div class="mt-4">
-                            <span class="badge bg-success">Firewall</span>
-                            <span class="badge bg-success ms-1">VLAN Segregation</span>
+                            <span class="badge bg-success" data-key="services.item2.tag1">Firewall</span>
+                            <span class="badge bg-success ms-1" data-key="services.item2.tag2">VLAN Segregation</span>
                         </div>
                     </div>
                 </div>
@@ -459,11 +527,11 @@
                         <div class="service-icon mx-auto">
                             <i class="bi bi-hdd-stack"></i>
                         </div>
-                        <h4 class="mb-3">Data Protection & Disaster Recovery</h4>
-                        <p>Automated data backup system design, disaster recovery planning, ensuring business continuity, achieving RTO/RPO objectives, preventing data loss risks.</p>
+                        <h4 class="mb-3" data-key="services.item3.title">Data Protection & Disaster Recovery</h4>
+                        <p data-key="services.item3.desc">Automated data backup system design, disaster recovery planning, ensuring business continuity, achieving RTO/RPO objectives, preventing data loss risks.</p>
                         <div class="mt-4">
-                            <span class="badge bg-warning">Data Backup</span>
-                            <span class="badge bg-warning ms-1">Disaster Recovery</span>
+                            <span class="badge bg-warning" data-key="services.item3.tag1">Data Backup</span>
+                            <span class="badge bg-warning ms-1" data-key="services.item3.tag2">Disaster Recovery</span>
                         </div>
                     </div>
                 </div>
@@ -473,11 +541,11 @@
                         <div class="service-icon mx-auto">
                             <i class="bi bi-headset"></i>
                         </div>
-                        <h4 class="mb-3">Professional IT Support & Maintenance</h4>
-                        <p>Network problem diagnosis and repair, system troubleshooting, hardware maintenance, software installation and configuration, providing continuous technical support services.</p>
+                        <h4 class="mb-3" data-key="services.item4.title">Professional IT Support & Maintenance</h4>
+                        <p data-key="services.item4.desc">Network problem diagnosis and repair, system troubleshooting, hardware maintenance, software installation and configuration, providing continuous technical support services.</p>
                         <div class="mt-4">
-                            <span class="badge bg-info">Technical Support</span>
-                            <span class="badge bg-info ms-1">System Maintenance</span>
+                            <span class="badge bg-info" data-key="services.item4.tag1">Technical Support</span>
+                            <span class="badge bg-info ms-1" data-key="services.item4.tag2">System Maintenance</span>
                         </div>
                     </div>
                 </div>
@@ -489,11 +557,11 @@
                     <div class="bg-white rounded-3 p-4 p-md-5 shadow-sm">
                         <div class="row align-items-center">
                             <div class="col-md-8">
-                                <h4 class="mb-3">Customized Enterprise IT Architecture Design</h4>
-                                <p class="mb-0">We deeply understand each enterprise's unique needs, providing tailor-made IT solutions. From initial assessment to design, implementation, and continuous optimization, we ensure your technology infrastructure supports business growth while defending against security threats.</p>
+                                <h4 class="mb-3" data-key="services.expertise.title">Customized Enterprise IT Architecture Design</h4>
+                                <p class="mb-0" data-key="services.expertise.desc">We deeply understand each enterprise's unique needs, providing tailor-made IT solutions. From initial assessment to design, implementation, and continuous optimization, we ensure your technology infrastructure supports business growth while defending against security threats.</p>
                             </div>
                             <div class="col-md-4 text-md-end mt-3 mt-md-0">
-                                <a href="#contact" class="btn btn-primary btn-lg px-4">
+                                <a href="#contact" class="btn btn-primary btn-lg px-4" data-key="services.expertise.cta">
                                     <i class="bi bi-calendar-check me-2"></i>Schedule Architecture Assessment
                                 </a>
                             </div>
@@ -510,19 +578,19 @@
             <div class="row text-center">
                 <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
                     <div class="stat-number">30+</div>
-                    <p class="text-light">Enterprises Served</p>
+                    <p class="text-light" data-key="stats.item1">Enterprises Served</p>
                 </div>
                 <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
                     <div class="stat-number">100%</div>
-                    <p class="text-light">Client Satisfaction</p>
+                    <p class="text-light" data-key="stats.item2">Client Satisfaction</p>
                 </div>
                 <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
                     <div class="stat-number">10+</div>
-                    <p class="text-light">Years of Professional Experience</p>
+                    <p class="text-light" data-key="stats.item3">Years of Professional Experience</p>
                 </div>
                 <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
                     <div class="stat-number">2H</div>
-                    <p class="text-light">Rapid Response Time</p>
+                    <p class="text-light" data-key="stats.item4">Rapid Response Time</p>
                 </div>
             </div>
         </div>
@@ -533,39 +601,39 @@
         <div class="container py-5">
             <div class="row align-items-center">
                 <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
-                    <h2 class="section-title">About Future Mystic Tech</h2>
-                    <p class="lead mb-4">Future Mystic Tech Enterprise is a Malaysia-based enterprise-level IT infrastructure and cybersecurity solutions provider. We specialize in building secure, reliable, and scalable technological environments for small and medium enterprises, facilitating digital transformation.</p>
+                    <h2 class="section-title" data-key="about.title">About Future Mystic Tech</h2>
+                    <p class="lead mb-4" data-key="about.subtitle">Future Mystic Tech Enterprise is a Malaysia-based enterprise-level IT infrastructure and cybersecurity solutions provider. We specialize in building secure, reliable, and scalable technological environments for small and medium enterprises, facilitating digital transformation.</p>
                     
                     <div class="mb-4">
-                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i>Our Areas of Expertise</h5>
-                        <p>We specialize in enterprise network architecture design, network security protection, private server deployment, data backup and disaster recovery, and comprehensive IT infrastructure management. Our team possesses extensive industry experience, capable of providing technology solutions aligned with best practices.</p>
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i><span data-key="about.expertise.title">Our Areas of Expertise</span></h5>
+                        <p data-key="about.expertise.desc">We specialize in enterprise network architecture design, network security protection, private server deployment, data backup and disaster recovery, and comprehensive IT infrastructure management. Our team possesses extensive industry experience, capable of providing technology solutions aligned with best practices.</p>
                     </div>
                     
                     <div class="mb-4">
-                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i>Technical Expertise & Certifications</h5>
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i><span data-key="about.tech.title">Technical Expertise & Certifications</span></h5>
                         <ul class="list-unstyled">
-                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Enterprise Network Architecture Design & Optimization</li>
-                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Cybersecurity Threat Analysis & Protection</li>
-                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i>Server Virtualization & Private Cloud Deployment</li>
-                            <li><i class="bi bi-arrow-right-circle text-primary me-2"></i>Business Continuity Planning & Disaster Recovery</li>
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item1">Enterprise Network Architecture Design & Optimization</span></li>
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item2">Cybersecurity Threat Analysis & Protection</span></li>
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item3">Server Virtualization & Private Cloud Deployment</span></li>
+                            <li><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item4">Business Continuity Planning & Disaster Recovery</span></li>
                         </ul>
                     </div>
                 </div>
                 
                 <div class="col-lg-6" data-aos="fade-left">
                     <div class="team-card">
-                        <div class="team-img" style="background-image: url(imgs/Future\ Mystic\ Tech\ Enterprise\ Logo.png) ">
-                            <i class="bi bi-person-square text-white"></i>
+                        <div class="team-img" style="background-image: url(imgs/Myself.jpg); height: 800px; width: 650px;" >
+                            
                         </div>
                         <div class="p-4">
-                            <h4>Leon Chan</h4>
-                            <p class="text-primary fw-bold">Founder & Chief Technology Consultant</p>
-                            <p>"With over 10 years of experience in enterprise network architecture and cybersecurity implementation, I deeply understand the technical challenges and security threats SMEs face during digital transformation. We not only provide technical solutions but also commit to becoming our clients' long-term trusted technology partners, ensuring your IT infrastructure supports business growth while defending against increasingly complex network threats."</p>
+                            <h4 data-key="about.team.name">Leon Chan</h4>
+                            <p class="text-primary fw-bold" data-key="about.team.role">Founder & Chief Technology Consultant</p>
+                            <p data-key="about.team.desc">"With over 10 years of experience in enterprise network architecture and cybersecurity implementation, I deeply understand the technical challenges and security threats SMEs face during digital transformation. We not only provide technical solutions but also commit to becoming our clients' long-term trusted technology partners, ensuring your IT infrastructure supports business growth while defending against increasingly complex network threats."</p>
                             
                             <div class="d-flex flex-wrap gap-2 mt-4">
-                                <span class="badge bg-secondary">Enterprise Network Expert</span>
-                                <span class="badge bg-secondary">Cybersecurity Advisor</span>
-                                <span class="badge bg-secondary">IT Architecture Designer</span>
+                                <span class="badge bg-secondary" data-key="about.team.tag1">Enterprise Network Expert</span>
+                                <span class="badge bg-secondary" data-key="about.team.tag2">Cybersecurity Advisor</span>
+                                <span class="badge bg-secondary" data-key="about.team.tag3">IT Architecture Designer</span>
                             </div>
                         </div>
                     </div>
@@ -575,7 +643,7 @@
             <!-- Service Features -->
             <div class="row mt-5 pt-5">
                 <div class="col-12 text-center mb-5">
-                    <h2 class="section-title text-center">Our Service Features</h2>
+                    <h2 class="section-title text-center" data-key="about.features.title">Our Service Features</h2>
                 </div>
                 
                 <div class="col-md-4 mb-4" data-aos="fade-up">
@@ -585,8 +653,8 @@
                                 <i class="bi bi-diagram-3 text-primary fs-1"></i>
                             </div>
                         </div>
-                        <h4 class="text-center mb-3">End-to-End Solutions</h4>
-                        <p>From requirement analysis, solution design, implementation deployment to continuous maintenance, we provide one-stop IT services, ensuring every phase complies with enterprise standards and best practices.</p>
+                        <h4 class="text-center mb-3" data-key="about.features.item1.title">End-to-End Solutions</h4>
+                        <p data-key="about.features.item1.desc">From requirement analysis, solution design, implementation deployment to continuous maintenance, we provide one-stop IT services, ensuring every phase complies with enterprise standards and best practices.</p>
                     </div>
                 </div>
                 
@@ -597,8 +665,8 @@
                                 <i class="bi bi-shield-check text-success fs-1"></i>
                             </div>
                         </div>
-                        <h4 class="text-center mb-3">Security Compliance</h4>
-                        <p>Our solutions adhere to industry security standards and compliance requirements, ensuring enterprise data processing and network communication comply with relevant regulations, reducing compliance risks.</p>
+                        <h4 class="text-center mb-3" data-key="about.features.item2.title">Security Compliance</h4>
+                        <p data-key="about.features.item2.desc">Our solutions adhere to industry security standards and compliance requirements, ensuring enterprise data processing and network communication comply with relevant regulations, reducing compliance risks.</p>
                     </div>
                 </div>
                 
@@ -609,8 +677,8 @@
                                 <i class="bi bi-graph-up text-warning fs-1"></i>
                             </div>
                         </div>
-                        <h4 class="text-center mb-3">Scalable Architecture</h4>
-                        <p>We design IT infrastructure with high scalability, capable of flexible expansion as your business grows, protecting your long-term investment.</p>
+                        <h4 class="text-center mb-3" data-key="about.features.item3.title">Scalable Architecture</h4>
+                        <p data-key="about.features.item3.desc">We design IT infrastructure with high scalability, capable of flexible expansion as your business grows, protecting your long-term investment.</p>
                     </div>
                 </div>
             </div>
@@ -622,13 +690,13 @@
         <div class="container">
             <div class="row text-center">
                 <div class="col-lg-8 mx-auto">
-                    <h2 class="mb-4">Get a Free Enterprise Cybersecurity Assessment</h2>
-                    <p class="mb-5 fs-5">Our experts will comprehensively analyze your current network architecture, identify potential security risks, and provide customized hardening solutions and optimization recommendations.</p>
+                    <h2 class="mb-4" data-key="cta.title">Get a Free Enterprise Cybersecurity Assessment</h2>
+                    <p class="mb-5 fs-5" data-key="cta.subtitle">Our experts will comprehensively analyze your current network architecture, identify potential security risks, and provide customized hardening solutions and optimization recommendations.</p>
                     <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
-                        <a href="tel:0128772713" class="btn btn-light btn-lg px-5">
+                        <a href="tel:0128772713" class="btn btn-light btn-lg px-5" data-key="cta.phone">
                             <i class="bi bi-telephone me-2"></i>Call for Consultation
                         </a>
-                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-outline-light btn-lg px-5">
+                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-outline-light btn-lg px-5" data-key="cta.email">
                             <i class="bi bi-envelope me-2"></i>Send Email
                         </a>
                     </div>
@@ -642,8 +710,8 @@
         <div class="container py-5">
             <div class="row mb-5">
                 <div class="col-lg-8 mx-auto text-center">
-                    <h2 class="section-title text-center">Contact Us</h2>
-                    <p class="lead">Get Professional Enterprise IT Solutions Consultation & Support</p>
+                    <h2 class="section-title text-center" data-key="contact.title">Contact Us</h2>
+                    <p class="lead" data-key="contact.subtitle">Get Professional Enterprise IT Solutions Consultation & Support</p>
                 </div>
             </div>
             
@@ -655,16 +723,16 @@
                                 <i class="bi bi-telephone text-white fs-4"></i>
                             </div>
                             <div>
-                                <h4 class="mb-0">Phone Contact</h4>
+                                <h4 class="mb-0" data-key="contact.phone.title">Phone Contact</h4>
                             </div>
                         </div>
                         <p class="fw-bold fs-3 text-primary mb-1">
                             <a href="tel:0128772713" style="color: inherit; text-decoration: none;">012-877 2713</a>
                         </p>
-                        <p><span class="hours-badge">Working Hours</span></p>
-                        <p>Monday - Friday 9:00am - 6:00pm</p>
-                        <p class="text-muted"><em>24-hour emergency response support available</em></p>
-                        <a href="tel:0128772713" class="btn btn-primary mt-3 w-100">
+                        <p><span class="hours-badge" data-key="contact.phone.hours">Working Hours</span></p>
+                        <p data-key="contact.phone.schedule">Monday - Friday 9:00am - 6:00pm</p>
+                        <p class="text-muted"><em data-key="contact.phone.note">24-hour emergency response support available</em></p>
+                        <a href="tel:0128772713" class="btn btn-primary mt-3 w-100" data-key="contact.phone.cta">
                             <i class="bi bi-telephone me-2"></i>Call Now
                         </a>
                     </div>
@@ -677,14 +745,14 @@
                                 <i class="bi bi-whatsapp text-white fs-4"></i>
                             </div>
                             <div>
-                                <h4 class="mb-0">WhatsApp</h4>
+                                <h4 class="mb-0" data-key="contact.whatsapp.title">WhatsApp</h4>
                             </div>
                         </div>
-                        <p class="mb-3">Click the button below to start a conversation directly. We typically respond within 5 minutes.</p>
-                        <a href="https://wa.me/60128772713" class="btn btn-success w-100" target="_blank">
+                        <p class="mb-3" data-key="contact.whatsapp.desc">Click the button below to start a conversation directly. We typically respond within 5 minutes.</p>
+                        <a href="https://wa.me/60128772713" class="btn btn-success w-100" target="_blank" data-key="contact.whatsapp.cta">
                             <i class="bi bi-whatsapp me-2"></i>Send WhatsApp Message
                         </a>
-                        <p class="mt-3 text-muted">Suitable for non-urgent inquiries and technical discussions</p>
+                        <p class="mt-3 text-muted" data-key="contact.whatsapp.note">Suitable for non-urgent inquiries and technical discussions</p>
                     </div>
                 </div>
                 
@@ -695,12 +763,12 @@
                                 <i class="bi bi-envelope text-white fs-4"></i>
                             </div>
                             <div>
-                                <h4 class="mb-0">Email</h4>
+                                <h4 class="mb-0" data-key="contact.email.title">Email</h4>
                             </div>
                         </div>
-                        <p class="fw-bold">Professional Consultation & Technical Proposal:</p>
-                        <p class="mb-3">Send detailed requirements to our professional email, and we will prepare a customized technical solution for you.</p>
-                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-warning w-100">
+                        <p class="fw-bold" data-key="contact.email.subtitle">Professional Consultation & Technical Proposal:</p>
+                        <p class="mb-3" data-key="contact.email.desc">Send detailed requirements to our professional email, and we will prepare a customized technical solution for you.</p>
+                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-warning w-100" data-key="contact.email.cta">
                             <i class="bi bi-envelope me-2"></i>futuremystictech@gmail.com
                         </a>
                     </div>
@@ -713,22 +781,22 @@
                     <div class="bg-white rounded-3 shadow p-4 p-md-5">
                         <div class="row">
                             <div class="col-md-6">
-                                <h4 class="mb-3">Service Area Coverage</h4>
-                                <p>We primarily provide on-site services to the following areas:</p>
+                                <h4 class="mb-3" data-key="contact.area.title">Service Area Coverage</h4>
+                                <p data-key="contact.area.subtitle">We primarily provide on-site services to the following areas:</p>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Klang Valley Area</li>
-                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Kuala Lumpur</li>
-                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i>Selangor State</li>
-                                    <li><i class="bi bi-geo-alt text-primary me-2"></i>Remote support available for other areas or scheduled on-site services</li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item1">Klang Valley Area</span></li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item2">Kuala Lumpur</span></li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item3">Selangor State</span></li>
+                                    <li><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item4">Remote support available for other areas or scheduled on-site services</span></li>
                                 </ul>
                             </div>
                             <div class="col-md-6">
-                                <h4 class="mb-3">Service Response Time</h4>
+                                <h4 class="mb-3" data-key="contact.response.title">Service Response Time</h4>
                                 <ul class="list-unstyled">
-                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>During Working Hours:</strong> Response within 2 hours</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Non-Working Hours:</strong> Response before 9am the next day</li>
-                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong>Critical Failures:</strong> 24/7 Emergency Support</li>
-                                    <li><i class="bi bi-check-circle text-success me-2"></i><strong>On-site Service:</strong> Scheduled based on distance</li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item1.title">During Working Hours:</strong> <span data-key="contact.response.item1.desc">Response within 2 hours</span></li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item2.title">Non-Working Hours:</strong> <span data-key="contact.response.item2.desc">Response before 9am the next day</span></li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item3.title">Critical Failures:</strong> <span data-key="contact.response.item3.desc">24/7 Emergency Support</span></li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item4.title">On-site Service:</strong> <span data-key="contact.response.item4.desc">Scheduled based on distance</span></li>
                                 </ul>
                             </div>
                         </div>
@@ -746,7 +814,7 @@
                     <h3 class="mb-4">
                         <img src="imgs/Future Mystic Tech Enterprise Logo.png" alt="Future Mystic Tech Enterprise Logo" height="50" class="me-2"> Future Mystic Tech Enterprise
                     </h3>
-                    <p>Enterprise-level cybersecurity and IT infrastructure solutions specialists, committed to building secure, reliable, and efficient digital environments for SMEs in Malaysia.</p>
+                    <p data-key="footer.desc">Enterprise-level cybersecurity and IT infrastructure solutions specialists, committed to building secure, reliable, and efficient digital environments for SMEs in Malaysia.</p>
                     <div class="social-icons mt-4">
                         <a href="https://wa.me/60128772713" target="_blank" title="WhatsApp">
                             <i class="bi bi-whatsapp"></i>
@@ -764,28 +832,28 @@
                 </div>
                 
                 <div class="col-lg-2 col-md-6 mb-4">
-                    <h4 class="mb-4">Quick Links</h4>
+                    <h4 class="mb-4" data-key="footer.links.title">Quick Links</h4>
                     <div class="footer-links">
-                        <a href="#home">Home</a>
-                        <a href="#services">Professional Services</a>
-                        <a href="#about">About Us</a>
-                        <a href="#contact">Contact Us</a>
+                        <a href="#home" data-key="footer.links.home">Home</a>
+                        <a href="#services" data-key="footer.links.services">Professional Services</a>
+                        <a href="#about" data-key="footer.links.about">About Us</a>
+                        <a href="#contact" data-key="footer.links.contact">Contact Us</a>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 col-md-6 mb-4">
-                    <h4 class="mb-4">Core Services</h4>
+                    <h4 class="mb-4" data-key="footer.services.title">Core Services</h4>
                     <div class="footer-links">
-                        <a href="#services">Private Server Solutions</a>
-                        <a href="#services">Network Security Architecture Design</a>
-                        <a href="#services">Data Protection & Disaster Recovery</a>
-                        <a href="#services">Enterprise Network Optimization</a>
-                        <a href="#services">Professional IT Support Services</a>
+                        <a href="#services" data-key="footer.services.item1">Private Server Solutions</a>
+                        <a href="#services" data-key="footer.services.item2">Network Security Architecture Design</a>
+                        <a href="#services" data-key="footer.services.item3">Data Protection & Disaster Recovery</a>
+                        <a href="#services" data-key="footer.services.item4">Enterprise Network Optimization</a>
+                        <a href="#services" data-key="footer.services.item5">Professional IT Support Services</a>
                     </div>
                 </div>
                 
                 <div class="col-lg-3 mb-4">
-                    <h4 class="mb-4">Contact Information</h4>
+                    <h4 class="mb-4" data-key="footer.contact.title">Contact Information</h4>
                     <div class="footer-links">
                         <p><i class="bi bi-telephone me-2"></i> 
                             <a href="tel:0128772713" class="text-white">012-877 2713</a>
@@ -796,14 +864,14 @@
                         <p><i class="bi bi-envelope me-2"></i> 
                             <a href="mailto:futuremystictech@gmail.com" class="text-white">futuremystictech@gmail.com</a>
                         </p>
-                        <p><i class="bi bi-clock me-2"></i> Working Hours: Monday - Friday 9:00am - 6:00pm</p>
-                        <p><i class="bi bi-lightning me-2"></i> Emergency Support: 24/7 Emergency Response</p>
+                        <p><i class="bi bi-clock me-2"></i> <span data-key="footer.contact.hours">Working Hours: Monday - Friday 9:00am - 6:00pm</span></p>
+                        <p><i class="bi bi-lightning me-2"></i> <span data-key="footer.contact.emergency">Emergency Support: 24/7 Emergency Response</span></p>
                     </div>
                 </div>
             </div>
             
             <div class="border-top border-secondary pt-4 mt-4 text-center">
-                <p class="text-light mb-0">&copy; 2026 Future Mystic Tech Enterprise. All right reserved.</p>
+                <p class="text-light mb-0" data-key="footer.copyright">&copy; 2026 Future Mystic Tech Enterprise. All right reserved.</p>
                 <br><br>
             </div>
         </div>
@@ -859,6 +927,308 @@
                 }
             });
         });
+        
+        // Language Translation Data
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.services": "Services",
+                "nav.about": "About Us",
+                "nav.contact": "Contact",
+                
+                // Hero Section
+                "hero.title": "Enterprise-Level Cybersecurity & IT Infrastructure Specialists",
+                "hero.subtitle": "Future Mystic Tech Enterprise is a leading corporate IT solutions provider in Malaysia, specializing in building secure, reliable, and efficient digital infrastructure for SMEs. We offer end-to-end network security management, private server deployment, data protection, and professional technical support services.",
+                "hero.cta1": "Free Technical Consultation",
+                "hero.cta2": "Call Now for Consultation",
+                "hero.feature1.title": "Enterprise-Level Security Protection",
+                "hero.feature1.desc": "Utilizing banking-grade security architecture, deploying next-generation firewalls, implementing zero-trust network access policies to comprehensively safeguard corporate data assets.",
+                "hero.feature2.title": "Professional Rapid Response",
+                "hero.feature2.desc": "2-hour rapid response during working hours, priority handling of critical business system failures to minimize business interruption time.",
+                
+                // Services Section
+                "services.title": "Enterprise-Level IT Solutions Services",
+                "services.subtitle": "We provide comprehensive enterprise IT infrastructure design, deployment, maintenance, and optimization services to ensure your business continuity and data security",
+                "services.item1.title": "Private Server Solutions",
+                "services.item1.desc": "Deploying high-performance private servers (Domain & Files Server) and accounting servers for enterprises, ensuring data autonomy and control to meet specific business requirements.",
+                "services.item1.tag1": "Advertising Server",
+                "services.item1.tag2": "Accounting Server",
+                "services.item2.title": "Network Security Architecture",
+                "services.item2.desc": "Enterprise firewall deployment and configuration, VLAN network design and segregation, wireless network security hardening to prevent unauthorized access and data breaches.",
+                "services.item2.tag1": "Firewall",
+                "services.item2.tag2": "VLAN Segregation",
+                "services.item3.title": "Data Protection & Disaster Recovery",
+                "services.item3.desc": "Automated data backup system design, disaster recovery planning, ensuring business continuity, achieving RTO/RPO objectives, preventing data loss risks.",
+                "services.item3.tag1": "Data Backup",
+                "services.item3.tag2": "Disaster Recovery",
+                "services.item4.title": "Professional IT Support & Maintenance",
+                "services.item4.desc": "Network problem diagnosis and repair, system troubleshooting, hardware maintenance, software installation and configuration, providing continuous technical support services.",
+                "services.item4.tag1": "Technical Support",
+                "services.item4.tag2": "System Maintenance",
+                "services.expertise.title": "Customized Enterprise IT Architecture Design",
+                "services.expertise.desc": "We deeply understand each enterprise's unique needs, providing tailor-made IT solutions. From initial assessment to design, implementation, and continuous optimization, we ensure your technology infrastructure supports business growth while defending against security threats.",
+                "services.expertise.cta": "Schedule Architecture Assessment",
+                
+                // Stats Section
+                "stats.item1": "Enterprises Served",
+                "stats.item2": "Client Satisfaction",
+                "stats.item3": "Years of Professional Experience",
+                "stats.item4": "Rapid Response Time",
+                
+                // About Section
+                "about.title": "About Future Mystic Tech",
+                "about.subtitle": "Future Mystic Tech Enterprise is a Malaysia-based enterprise-level IT infrastructure and cybersecurity solutions provider. We specialize in building secure, reliable, and scalable technological environments for small and medium enterprises, facilitating digital transformation.",
+                "about.expertise.title": "Our Areas of Expertise",
+                "about.expertise.desc": "We specialize in enterprise network architecture design, network security protection, private server deployment, data backup and disaster recovery, and comprehensive IT infrastructure management. Our team possesses extensive industry experience, capable of providing technology solutions aligned with best practices.",
+                "about.tech.title": "Technical Expertise & Certifications",
+                "about.tech.item1": "Enterprise Network Architecture Design & Optimization",
+                "about.tech.item2": "Cybersecurity Threat Analysis & Protection",
+                "about.tech.item3": "Server Virtualization & Private Cloud Deployment",
+                "about.tech.item4": "Business Continuity Planning & Disaster Recovery",
+                "about.team.name": "Leon Chan",
+                "about.team.role": "Founder & Chief Technology Consultant",
+                "about.team.desc": "\"With over 10 years of experience in enterprise network architecture and cybersecurity implementation, I deeply understand the technical challenges and security threats SMEs face during digital transformation. We not only provide technical solutions but also commit to becoming our clients' long-term trusted technology partners, ensuring your IT infrastructure supports business growth while defending against increasingly complex network threats.\"",
+                "about.team.tag1": "Enterprise Network Expert",
+                "about.team.tag2": "Cybersecurity Advisor",
+                "about.team.tag3": "IT Architecture Designer",
+                "about.features.title": "Our Service Features",
+                "about.features.item1.title": "End-to-End Solutions",
+                "about.features.item1.desc": "From requirement analysis, solution design, implementation deployment to continuous maintenance, we provide one-stop IT services, ensuring every phase complies with enterprise standards and best practices.",
+                "about.features.item2.title": "Security Compliance",
+                "about.features.item2.desc": "Our solutions adhere to industry security standards and compliance requirements, ensuring enterprise data processing and network communication comply with relevant regulations, reducing compliance risks.",
+                "about.features.item3.title": "Scalable Architecture",
+                "about.features.item3.desc": "We design IT infrastructure with high scalability, capable of flexible expansion as your business grows, protecting your long-term investment.",
+                
+                // CTA Section
+                "cta.title": "Get a Free Enterprise Cybersecurity Assessment",
+                "cta.subtitle": "Our experts will comprehensively analyze your current network architecture, identify potential security risks, and provide customized hardening solutions and optimization recommendations.",
+                "cta.phone": "Call for Consultation",
+                "cta.email": "Send Email",
+                
+                // Contact Section
+                "contact.title": "Contact Us",
+                "contact.subtitle": "Get Professional Enterprise IT Solutions Consultation & Support",
+                "contact.phone.title": "Phone Contact",
+                "contact.phone.hours": "Working Hours",
+                "contact.phone.schedule": "Monday - Friday 9:00am - 6:00pm",
+                "contact.phone.note": "24-hour emergency response support available",
+                "contact.phone.cta": "Call Now",
+                "contact.whatsapp.title": "WhatsApp",
+                "contact.whatsapp.desc": "Click the button below to start a conversation directly. We typically respond within 5 minutes.",
+                "contact.whatsapp.cta": "Send WhatsApp Message",
+                "contact.whatsapp.note": "Suitable for non-urgent inquiries and technical discussions",
+                "contact.email.title": "Email",
+                "contact.email.subtitle": "Professional Consultation & Technical Proposal:",
+                "contact.email.desc": "Send detailed requirements to our professional email, and we will prepare a customized technical solution for you.",
+                "contact.email.cta": "futuremystictech@gmail.com",
+                "contact.area.title": "Service Area Coverage",
+                "contact.area.subtitle": "We primarily provide on-site services to the following areas:",
+                "contact.area.item1": "Klang Valley Area",
+                "contact.area.item2": "Kuala Lumpur",
+                "contact.area.item3": "Selangor State",
+                "contact.area.item4": "Remote support available for other areas or scheduled on-site services",
+                "contact.response.title": "Service Response Time",
+                "contact.response.item1.title": "During Working Hours:",
+                "contact.response.item1.desc": "Response within 2 hours",
+                "contact.response.item2.title": "Non-Working Hours:",
+                "contact.response.item2.desc": "Response before 9am the next day",
+                "contact.response.item3.title": "Critical Failures:",
+                "contact.response.item3.desc": "24/7 Emergency Support",
+                "contact.response.item4.title": "On-site Service:",
+                "contact.response.item4.desc": "Scheduled based on distance",
+                
+                // Footer
+                "footer.desc": "Enterprise-level cybersecurity and IT infrastructure solutions specialists, committed to building secure, reliable, and efficient digital environments for SMEs in Malaysia.",
+                "footer.links.title": "Quick Links",
+                "footer.links.home": "Home",
+                "footer.links.services": "Professional Services",
+                "footer.links.about": "About Us",
+                "footer.links.contact": "Contact Us",
+                "footer.services.title": "Core Services",
+                "footer.services.item1": "Private Server Solutions",
+                "footer.services.item2": "Network Security Architecture Design",
+                "footer.services.item3": "Data Protection & Disaster Recovery",
+                "footer.services.item4": "Enterprise Network Optimization",
+                "footer.services.item5": "Professional IT Support Services",
+                "footer.contact.title": "Contact Information",
+                "footer.contact.hours": "Working Hours: Monday - Friday 9:00am - 6:00pm",
+                "footer.contact.emergency": "Emergency Support: 24/7 Emergency Response",
+                "footer.copyright": "© 2026 Future Mystic Tech Enterprise. All right reserved."
+            },
+            cn: {
+                // Navigation
+                "nav.home": "首页",
+                "nav.services": "专业服务",
+                "nav.about": "关于我们",
+                "nav.contact": "联系我们",
+                
+                // Hero Section
+                "hero.title": "企业级网络安全与IT基础设施专家",
+                "hero.subtitle": "未来神秘科技企业是马来西亚领先的企业IT解决方案提供商，专门为中小型企业构建安全、可靠和高效的数字化基础设施。我们提供端到端的网络安全管理、私有服务器部署、数据保护和专业技术支持服务。",
+                "hero.cta1": "免费技术咨询",
+                "hero.cta2": "立即致电咨询",
+                "hero.feature1.title": "企业级安全防护",
+                "hero.feature1.desc": "采用银行级安全架构，部署下一代防火墙，实施零信任网络访问策略，全面保障企业数据资产安全。",
+                "hero.feature2.title": "专业快速响应",
+                "hero.feature2.desc": "工作时间2小时快速响应，优先处理关键业务系统故障，最大限度减少业务中断时间。",
+                
+                // Services Section
+                "services.title": "企业级IT解决方案服务",
+                "services.subtitle": "我们提供全面的企业IT基础设施设计、部署、维护和优化服务，确保您的业务连续性和数据安全",
+                "services.item1.title": "私有服务器解决方案",
+                "services.item1.desc": "为企业部署高性能私有服务器（域服务器和文件服务器）和会计服务器，确保数据自主可控，满足特定业务需求。",
+                "services.item1.tag1": "广告服务器",
+                "services.item1.tag2": "会计服务器",
+                "services.item2.title": "网络安全架构设计",
+                "services.item2.desc": "企业防火墙部署与配置，VLAN网络设计与隔离，无线网络安全加固，防止未经授权的访问和数据泄露。",
+                "services.item2.tag1": "防火墙",
+                "services.item2.tag2": "VLAN隔离",
+                "services.item3.title": "数据保护与灾难恢复",
+                "services.item3.desc": "自动化数据备份系统设计，灾难恢复规划，确保业务连续性，实现RTO/RPO目标，预防数据丢失风险。",
+                "services.item3.tag1": "数据备份",
+                "services.item3.tag2": "灾难恢复",
+                "services.item4.title": "专业IT支持与维护",
+                "services.item4.desc": "网络问题诊断与修复，系统故障排除，硬件维护，软件安装与配置，提供持续技术支援服务。",
+                "services.item4.tag1": "技术支持",
+                "services.item4.tag2": "系统维护",
+                "services.expertise.title": "定制化企业IT架构设计",
+                "services.expertise.desc": "我们深入了解每家企业的独特需求，提供量身定制的IT解决方案。从初步评估、设计、实施部署到持续优化，确保您的技术基础设施既能支持业务增长，又能抵御安全威胁。",
+                "services.expertise.cta": "安排架构评估",
+                
+                // Stats Section
+                "stats.item1": "服务企业",
+                "stats.item2": "客户满意度",
+                "stats.item3": "专业经验年限",
+                "stats.item4": "快速响应时间",
+                
+                // About Section
+                "about.title": "关于未来神秘科技",
+                "about.subtitle": "未来神秘科技企业是马来西亚本土的企业级IT基础设施和网络安全解决方案提供商。我们专注于为中小型企业构建安全、可靠和可扩展的技术环境，推动数字化转型。",
+                "about.expertise.title": "我们的专业领域",
+                "about.expertise.desc": "我们专注于企业网络架构设计、网络安全防护、私有服务器部署、数据备份与灾难恢复以及全面的IT基础设施管理。我们的团队拥有丰富的行业经验，能够提供符合最佳实践的技术解决方案。",
+                "about.tech.title": "专业技术与认证",
+                "about.tech.item1": "企业网络架构设计与优化",
+                "about.tech.item2": "网络安全威胁分析与防护",
+                "about.tech.item3": "服务器虚拟化与私有云部署",
+                "about.tech.item4": "业务连续性规划与灾难恢复",
+                "about.team.name": "陈利安",
+                "about.team.role": "创始人兼首席技术顾问",
+                "about.team.desc": "“拥有超过10年的企业网络架构和网络安全实施经验，我深刻理解中小型企业在数字化转型过程中面临的技术挑战和安全威胁。我们不仅提供技术解决方案，更致力于成为客户长期信赖的技术合作伙伴，确保您的IT基础设施既能支持业务增长，又能抵御日益复杂的网络威胁。”",
+                "about.team.tag1": "企业网络专家",
+                "about.team.tag2": "网络安全顾问",
+                "about.team.tag3": "IT架构设计师",
+                "about.features.title": "我们的服务特点",
+                "about.features.item1.title": "端到端解决方案",
+                "about.features.item1.desc": "从需求分析、方案设计、实施部署到持续维护，我们提供一站式IT服务，确保每个环节都符合企业标准与最佳实践。",
+                "about.features.item2.title": "安全合规性",
+                "about.features.item2.desc": "我们的解决方案遵循行业安全标准和合规要求，确保企业数据处理和网络通信符合相关法规，降低合规风险。",
+                "about.features.item3.title": "可扩展架构",
+                "about.features.item3.desc": "我们设计具有高度可扩展性的IT基础设施，能够随着业务增长灵活扩展，保护您的长期投资。",
+                
+                // CTA Section
+                "cta.title": "获取免费企业网络安全评估",
+                "cta.subtitle": "我们的专家将全面分析您当前的网络架构，识别潜在安全风险，并提供定制化的加固解决方案和优化建议。",
+                "cta.phone": "致电咨询",
+                "cta.email": "发送邮件",
+                
+                // Contact Section
+                "contact.title": "联系我们",
+                "contact.subtitle": "获取专业企业IT解决方案咨询与支持",
+                "contact.phone.title": "电话联系",
+                "contact.phone.hours": "工作时间",
+                "contact.phone.schedule": "周一至周五 上午9:00 - 下午6:00",
+                "contact.phone.note": "提供24小时紧急响应支持",
+                "contact.phone.cta": "立即致电",
+                "contact.whatsapp.title": "WhatsApp",
+                "contact.whatsapp.desc": "点击下方按钮直接开始对话。我们通常会在5分钟内回复。",
+                "contact.whatsapp.cta": "发送WhatsApp消息",
+                "contact.whatsapp.note": "适用于非紧急咨询和技术讨论",
+                "contact.email.title": "电子邮件",
+                "contact.email.subtitle": "专业咨询与技术方案：",
+                "contact.email.desc": "将详细需求发送至我们的专业邮箱，我们将为您准备定制的技术解决方案。",
+                "contact.email.cta": "futuremystictech@gmail.com",
+                "contact.area.title": "服务区域覆盖",
+                "contact.area.subtitle": "我们主要向以下地区提供现场服务：",
+                "contact.area.item1": "巴生谷地区",
+                "contact.area.item2": "吉隆坡",
+                "contact.area.item3": "雪兰莪州",
+                "contact.area.item4": "其他地区可提供远程支持或预约现场服务",
+                "contact.response.title": "服务响应时间",
+                "contact.response.item1.title": "工作时间：",
+                "contact.response.item1.desc": "2小时内响应",
+                "contact.response.item2.title": "非工作时间：",
+                "contact.response.item2.desc": "次日上午9点前响应",
+                "contact.response.item3.title": "关键故障：",
+                "contact.response.item3.desc": "24/7紧急支持",
+                "contact.response.item4.title": "现场服务：",
+                "contact.response.item4.desc": "根据距离安排时间",
+                
+                // Footer
+                "footer.desc": "企业级网络安全和IT基础设施解决方案专家，致力于为马来西亚中小型企业构建安全、可靠和高效的数字化环境。",
+                "footer.links.title": "快速链接",
+                "footer.links.home": "首页",
+                "footer.links.services": "专业服务",
+                "footer.links.about": "关于我们",
+                "footer.links.contact": "联系我们",
+                "footer.services.title": "核心服务",
+                "footer.services.item1": "私有服务器解决方案",
+                "footer.services.item2": "网络安全架构设计",
+                "footer.services.item3": "数据保护与灾难恢复",
+                "footer.services.item4": "企业网络优化",
+                "footer.services.item5": "专业IT支持服务",
+                "footer.contact.title": "联系信息",
+                "footer.contact.hours": "工作时间：周一至周五 上午9:00 - 下午6:00",
+                "footer.contact.emergency": "紧急支持：24/7紧急响应",
+                "footer.copyright": "© 2026 未来神秘科技企业。版权所有。"
+            }
+        };
+        
+        // Language Switcher Functionality
+        let currentLang = 'en';
+        
+        function switchLanguage(lang) {
+            if (lang === currentLang) return;
+            
+            // Update active button
+            document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-cn-btn').classList.toggle('active', lang === 'cn');
+            
+            // Update body class for language-specific styles
+            document.body.classList.remove('lang-en', 'lang-cn');
+            document.body.classList.add(`lang-${lang}`);
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+            
+            currentLang = lang;
+            
+            // Store language preference in localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Language Switcher Event Listeners
+        document.getElementById('lang-en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('lang-cn-btn').addEventListener('click', () => switchLanguage('cn'));
+        
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && (savedLang === 'en' || savedLang === 'cn')) {
+            switchLanguage(savedLang);
+        }
     </script>
 </body>
 </html>
