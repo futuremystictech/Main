@@ -1,0 +1,1714 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Future Mystic Tech Enterprise | Malaysia Corporate Cybersecurity & IT Solutions Specialist</title>
+    <meta name="description" content="Professional Corporate IT Solutions Expert: Private Server Deployment, Enterprise Firewall Installation, VLAN Network Segregation, Data Backup & Disaster Recovery, 7x24 IT Support. Contact 012-8772713 for Free Security Assessment.">
+    <meta name="robots" content="index, follow">
+    <meta name="author" content="Future Mystic Tech Enterprise">
+    <meta name="keywords" content="Malaysia IT Services, Cybersecurity Malaysia, Enterprise Firewall, Private Server, IT Support SME, Network Security">
+
+    
+    <!-- Bootstrap 5 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    
+    <!-- Bootstrap Icons -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Roboto+Mono:wght@400;500&display=swap" rel="stylesheet">
+    
+    <!-- AOS Animation -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+    
+    <style>
+        :root {
+            --primary-blue: #1e40af;
+            --secondary-blue: #3b82f6;
+            --accent-green: #10b981;
+            --accent-orange: #f59e0b;
+            --dark-gray: #1f2937;
+            --light-gray: #f9fafb;
+            --text-dark: #374151;
+        }
+        
+        body {
+            font-family: 'Inter', sans-serif;
+            color: var(--text-dark);
+            overflow-x: hidden;
+        }
+        
+        h1, h2, h3, h4, h5 {
+            font-weight: 700;
+            color: var(--dark-gray);
+        }
+        
+        .section-title {
+            position: relative;
+            padding-bottom: 15px;
+            margin-bottom: 40px;
+        }
+        
+        .section-title:after {
+            content: '';
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 60px;
+            height: 4px;
+            background: var(--primary-blue);
+            border-radius: 2px;
+        }
+        
+        .section-title.text-center:after {
+            left: 50%;
+            transform: translateX(-50%);
+        }
+        
+        /* Navbar Styles */
+        .navbar-brand {
+            font-weight: 800;
+            font-size: 1.8rem;
+            color: var(--primary-blue) !important;
+        }
+        
+        .navbar-brand i {
+            color: var(--accent-green);
+        }
+        
+        .nav-link {
+            font-weight: 500;
+            margin: 0 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-link:hover {
+            color: var(--primary-blue) !important;
+        }
+        
+        .nav-phone {
+            background: var(--accent-green);
+            color: white;
+            padding: 8px 15px;
+            border-radius: 30px;
+            font-weight: 600;
+            transition: all 0.3s ease;
+        }
+        
+        .nav-phone:hover {
+            background: #0da271;
+            transform: translateY(-2px);
+        }
+        
+        /* Language Switcher */
+        .language-switcher {
+            margin-right: 15px;
+        }
+        
+        .lang-btn {
+            background: transparent;
+            border: 2px solid var(--primary-blue);
+            color: var(--primary-blue);
+            padding: 6px 12px;
+            border-radius: 20px;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        
+        .lang-btn:hover {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .lang-btn.active {
+            background: var(--primary-blue);
+            color: white;
+        }
+        
+        .lang-btn i {
+            margin-right: 5px;
+        }
+        
+        /* Hero Section */
+        .hero-section {
+            background: linear-gradient(135deg, var(--primary-blue) 0%, var(--secondary-blue) 100%);
+            color: white;
+            padding: 180px 0 100px;
+            position: relative;
+            overflow: hidden;
+        }
+        
+        .hero-section:before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            bottom: 0;
+            background: url('data:image/svg+xml;base64,PHN2ZyB3aWR0aD0iMTAwJSIgaGVpZ2h0PSIxMDAlIiB2aWV3Qm94PSIwIDAgMTI4MCAxNDAiIHByZXNlcnZlQXNwZWN0UmF0aW89Im5vbmUiIHhtbG5zPSJodHRwOi8vd3d3LnczLm9yZy8yMDAwL3N2ZyI+PGcgZmlsbD0iIzAwMCIgZmlsbC1vcGFjaXR5PSIwLjEiPjxwYXRoIGQ9Ik0wIDU2TDM2IDQwQzcyIDI0IDE0NCAwIDIxNiAwQzI4OCAwIDM2MCAyNCA0MzIgMjRDNTA0IDI0IDU3NiAwIDY0OCAwQzcyMCAwIDc5MiAyNCA4NjQgMjRDOTM2IDI0IDEwMDggMCAxMDgwIDBDMTE1MiAwIDEyMjQgMjQgMTI4MCA0MEwxMjgwIDE0MEwxMDgwIDE0MEMxMDQwIDE0MCA5NjAgMTQwIDkwMCAxNDBDODQwIDE0MCA3NjAgMTQwIDcyMCAxNDBDNjgwIDE0MCA2MDAgMTQwIDU0MCAxNDBDNDgwIDE0MCA0MDAgMTQwIDM2MCAxNDBDMzIwIDE0MCAyNDAgMTQwIDE4MCAxNDBDMTIwIDE0MCA0MCAxNDAgMCAxNDBaIj48L3BhdGg+PC9nPjwvc3ZnPg==');
+            background-position: bottom;
+            background-repeat: repeat-x;
+            opacity: 0.1;
+        }
+        
+        .hero-title {
+            font-size: 3.5rem;
+            font-weight: 800;
+            line-height: 1.2;
+            margin-bottom: 25px;
+        }
+        
+        .hero-subtitle {
+            font-size: 1.2rem;
+            opacity: 0.9;
+            margin-bottom: 35px;
+        }
+        
+        /* Service Cards */
+        .service-card {
+            background: white;
+            border-radius: 12px;
+            padding: 40px 30px;
+            height: 100%;
+            transition: all 0.4s ease;
+            border: 1px solid #e5e7eb;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        .service-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 25px -5px rgba(0, 0, 0, 0.1);
+            border-color: var(--secondary-blue);
+        }
+        
+        .service-icon {
+            width: 70px;
+            height: 70px;
+            border-radius: 12px;
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            color: white;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            margin-bottom: 25px;
+        }
+        
+        /* Stats Section */
+        .stats-section {
+            background: linear-gradient(135deg, var(--dark-gray) 0%, #111827 100%);
+            color: white;
+            padding: 80px 0;
+        }
+        
+        .stat-number {
+            font-size: 3rem;
+            font-weight: 800;
+            color: var(--accent-green);
+        }
+        
+        /* CTA Section */
+        .cta-section {
+            background: linear-gradient(135deg, var(--accent-green) 0%, #0da271 100%);
+            color: white;
+            padding: 80px 0;
+            border-radius: 20px;
+            margin: 100px 0;
+        }
+        
+        /* Team Cards */
+        .team-card {
+            background: white;
+            border-radius: 12px;
+            overflow: hidden;
+            box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1);
+            transition: all 0.3s ease;
+        }
+        
+        .team-card:hover {
+            transform: translateY(-5px);
+        }
+        
+        .team-img {
+            height: 250px;
+            background: linear-gradient(135deg, #e5e7eb, #d1d5db);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 5rem;
+            color: var(--dark-gray);
+            background-size: cover;
+            background-position: center;
+        }
+        
+        /* Contact Cards */
+        .contact-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            border-left: 5px solid var(--primary-blue);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* WhatsApp Floating Button */
+        .whatsapp-float {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            width: 60px;
+            height: 60px;
+            background: #25D366;
+            color: white;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 1.8rem;
+            box-shadow: 0 4px 15px rgba(37, 211, 102, 0.4);
+            z-index: 1000;
+            transition: all 0.3s ease;
+        }
+        
+        .whatsapp-float:hover {
+            transform: scale(1.1);
+            box-shadow: 0 6px 20px rgba(37, 211, 102, 0.6);
+        }
+        
+        /* Footer */
+        .footer {
+            background: var(--dark-gray);
+            color: white;
+            padding-top: 80px;
+        }
+        
+        .footer-links a {
+            color: #d1d5db;
+            text-decoration: none;
+            transition: color 0.3s ease;
+            display: block;
+            margin-bottom: 10px;
+        }
+        
+        .footer-links a:hover {
+            color: white;
+        }
+        
+        .social-icons a {
+            display: inline-block;
+            width: 40px;
+            height: 40px;
+            background: rgba(255, 255, 255, 0.1);
+            border-radius: 50%;
+            text-align: center;
+            line-height: 40px;
+            margin-right: 10px;
+            transition: all 0.3s ease;
+        }
+        
+        .social-icons a:hover {
+            background: var(--accent-green);
+            transform: translateY(-3px);
+        }
+        
+        /* Expertise Cards */
+        .expertise-card {
+            background: white;
+            border-radius: 12px;
+            padding: 30px;
+            height: 100%;
+            border-top: 4px solid var(--primary-blue);
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+        }
+        
+        /* Responsive Adjustments */
+        @media (max-width: 768px) {
+            .hero-title {
+                font-size: 2.5rem;
+            }
+            
+            .hero-section {
+                padding: 150px 0 80px;
+            }
+            
+            .section-title {
+                font-size: 1.8rem;
+            }
+            
+            .stat-number {
+                font-size: 2.5rem;
+            }
+            
+            .language-switcher {
+                margin-right: 10px;
+                margin-left: auto;
+            }
+            
+            .lang-btn {
+                padding: 4px 8px;
+                font-size: 0.8rem;
+            }
+        }
+        
+        /* Working Hours Badge */
+        .hours-badge {
+            background: linear-gradient(135deg, var(--accent-orange), #f97316);
+            color: white;
+            padding: 5px 15px;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: 600;
+        }
+        
+        .email-link {
+            color: var(--primary-blue);
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+        }
+        
+        .email-link:hover {
+            color: var(--secondary-blue);
+            text-decoration: underline;
+        }
+        
+        /* Language-specific styles */
+        .lang-cn .section-title {
+            font-weight: 600;
+        }
+        
+        .lang-cn .hero-title {
+            font-weight: 700;
+        }
+        
+        .lang-cn .stat-number {
+            font-family: 'Inter', sans-serif;
+        }
+        
+        .lang-cn h1, .lang-cn h2, .lang-cn h3, .lang-cn h4, .lang-cn h5 {
+            font-weight: 600;
+        }
+        
+        /* 视频部分样式 - 新增 */
+        .video-container {
+            background: white;
+            transition: all 0.3s ease;
+            border-radius: 20px;
+            overflow: hidden;
+        }
+        
+        .video-container:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+        }
+        
+        .video-wrapper {
+            position: relative;
+            background: #000;
+        }
+        
+        /* .btn-play {
+            background: linear-gradient(135deg, var(--primary-blue), var(--secondary-blue));
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 25px rgba(30, 64, 175, 0.5);
+        }
+        
+        .btn-play:hover {
+            transform: scale(1.1);
+            background: linear-gradient(135deg, var(--secondary-blue), var(--primary-blue));
+        } */
+
+        /* 优化版本 - 更像YouTube的播放按钮 */
+        .btn-play {
+            background: #FF0000;
+            border: none;
+            transition: all 0.3s ease;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 8px 20px rgba(255, 0, 0, 0.4);
+            width: 70px;
+            height: 70px;
+            border-radius: 50%;
+            position: relative;
+        }
+
+        .btn-play i {
+            font-size: 2rem;
+            margin-left: 4px; /* 让播放图标稍微右移，看起来更平衡 */
+            color: white;
+        }
+
+        .btn-play:hover {
+            transform: scale(1.15);
+            background: #FF3333; /* 亮一点的红色 */
+            box-shadow: 0 12px 30px rgba(255, 0, 0, 0.6);
+        }
+
+        /* 添加一个小的脉冲动画效果，类似YouTube的交互 */
+        @keyframes pulse {
+            0% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0.7);
+            }
+            70% {
+                box-shadow: 0 0 0 15px rgba(255, 0, 0, 0);
+            }
+            100% {
+                box-shadow: 0 0 0 0 rgba(255, 0, 0, 0);
+            }
+        }
+
+        .btn-play:focus {
+            animation: pulse 1.5s infinite;
+        }
+        
+        .video-description {
+            border-top: 5px solid var(--primary-blue);
+        }
+        
+        /* 口号样式 */
+        .slogan-chip {
+            animation: float 3s ease-in-out infinite;
+            transition: all 0.3s ease;
+            font-weight: 600;
+        }
+        
+        .slogan-chip:nth-child(1) {
+            animation-delay: 0s;
+        }
+        
+        .slogan-chip:nth-child(2) {
+            animation-delay: 0.5s;
+        }
+        
+        .slogan-chip:nth-child(3) {
+            animation-delay: 1s;
+        }
+        
+        .slogan-chip:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2);
+        }
+        
+        @keyframes float {
+            0%, 100% {
+                transform: translateY(0);
+            }
+            50% {
+                transform: translateY(-10px);
+            }
+        }
+        
+        .slogan-text {
+            font-weight: 800;
+            line-height: 1.2;
+        }
+        
+        /* 响应式调整 - 视频部分 */
+        @media (max-width: 768px) {
+            .slogan-text {
+                font-size: 2.5rem;
+            }
+            
+            .video-description .btn-lg {
+                width: 100%;
+            }
+            
+            .slogan-chip {
+                font-size: 0.9rem;
+                padding: 8px 16px;
+            }
+        }
+    </style>
+</head>
+<body class="lang-en">
+    <!-- WhatsApp Floating Button -->
+    <a href="https://wa.me/60128772713" class="whatsapp-float" target="_blank">
+        <i class="bi bi-whatsapp"></i>
+    </a>
+
+    <!-- Navigation Bar -->
+    <nav class="navbar navbar-expand-lg navbar-light bg-white fixed-top shadow-sm py-3">
+        <div class="container">
+            <a class="navbar-brand" href="#">
+                <img src="imgs/Future Mystic Tech Enterprise Logo.png" alt="Future Mystic Tech Enterprise Logo" height="50" class="me-2"> Future Mystic Tech Enterprise
+            </a>
+            
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <!-- Language Switcher -->
+                    <li class="nav-item language-switcher">
+                        <div class="d-flex">
+                            <button class="lang-btn active" id="lang-en-btn">
+                                <i class="bi bi-translate"></i> EN
+                            </button>
+                            <button class="lang-btn ms-2" id="lang-cn-btn">
+                                <i class="bi bi-translate"></i> 中文
+                            </button>
+                        </div>
+                    </li>
+                    
+                    <li class="nav-item">
+                        <a class="nav-link" href="#home" data-key="nav.home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#services" data-key="nav.services">Services</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#about" data-key="nav.about">About Us</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-key="nav.contact">Contact</a>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section id="home" class="hero-section" data-aos="fade-up">
+        <div class="container">
+            <div class="row align-items-center">
+                <div class="col-lg-6">
+                    <h1 class="hero-title" data-key="hero.title">Enterprise-Level Cybersecurity & IT Infrastructure Specialists</h1>
+                    <p class="hero-subtitle" data-key="hero.subtitle">Future Mystic Tech Enterprise is a leading corporate IT solutions provider in Malaysia, specializing in building secure, reliable, and efficient digital infrastructure for SMEs. We offer end-to-end network security management, private server deployment, data protection, and professional technical support services.</p>
+                    <div class="d-flex flex-wrap gap-3">
+                        <a href="#contact" class="btn btn-light btn-lg px-4 py-3 fw-bold" data-key="hero.cta1">
+                            <i class="bi bi-chat-left-text me-2"></i>Free Technical Support
+                        </a>
+                        <a href="tel:0128772713" class="btn btn-outline-light btn-lg px-4 py-3" data-key="hero.cta2">
+                            <i class="bi bi-telephone me-2"></i>Call Now for Consultation
+                        </a>
+                    </div>
+                </div>
+                <div class="col-lg-6 mt-5 mt-lg-0">
+                    <div class="position-relative">
+                        <div class="bg-white rounded-3 p-4 shadow-lg" data-aos="fade-left" data-aos-delay="200">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-primary rounded-circle p-2 me-3">
+                                    <i class="bi bi-shield-check text-white"></i>
+                                </div>
+                                <h5 class="mb-0" data-key="hero.feature1.title">Enterprise-Level Security Protection</h5>
+                            </div>
+                            <p class="text-muted" data-key="hero.feature1.desc">Utilizing banking-grade security architecture, deploying next-generation firewalls, implementing zero-trust network access policies to comprehensively safeguard corporate data assets.</p>
+                        </div>
+                        
+                        <div class="bg-white rounded-3 p-4 shadow-lg mt-4" data-aos="fade-left" data-aos-delay="400">
+                            <div class="d-flex align-items-center mb-3">
+                                <div class="bg-success rounded-circle p-2 me-3">
+                                    <i class="bi bi-clock-history text-white"></i>
+                                </div>
+                                <h5 class="mb-0" data-key="hero.feature2.title">Professional Rapid Response</h5>
+                            </div>
+                            <p class="text-muted" data-key="hero.feature2.desc">2-hour rapid response during working hours, priority handling of critical business system failures to minimize business interruption time.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- ============ 宣传视频部分 - 新增 ============ -->
+    <section class="py-5" id="promo-video" style="background: linear-gradient(135deg, #0f172a 0%, #1e293b 100%);">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-10 mx-auto text-center">
+                    <h2 class="text-white mb-3" data-key="video.title">Secure Your Business Future with Enterprise-Grade Technology</h2>
+                    <p class="lead text-light mb-4" data-key="video.subtitle">Watch how we transform enterprise IT infrastructure with security-first solutions</p>
+                </div>
+            </div>
+            
+            <div class="row justify-content-center">
+                <div class="col-lg-10 col-xl-8">
+                    <!-- 视频容器 -->
+                    <div class="video-container rounded-4 overflow-hidden shadow-lg" data-aos="zoom-in" data-aos-duration="1000">
+                        <!-- 视频容器 -->
+                        <div class="video-wrapper position-relative" style="padding-bottom: 56.25%; background: #000;">
+                            <!-- 视频封面 -->
+                            <img src="https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80" 
+                                 alt="Future Mystic Tech Enterprise - Cybersecurity Solutions" 
+                                 class="position-absolute w-100 h-100" style="object-fit: cover;">
+                            
+                            <!-- 播放按钮 -->
+                            <div class="position-absolute top-50 start-50 translate-middle">
+                                <button class="btn btn-primary btn-play" id="playVideoBtn" style="width: 80px; height: 80px; border-radius: 50%;">
+                                    <i class="bi bi-play-fill fs-1"></i>
+                                </button>
+                            </div>
+                            
+                            <!-- 实际视频（初始隐藏） -->
+                            <iframe id="promoVideo" 
+                                    class="position-absolute w-100 h-100 d-none" 
+                                    src="" 
+                                    title="Future Mystic Tech Enterprise - Corporate IT Solutions" 
+                                    frameborder="0" 
+                                    allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" 
+                                    allowfullscreen>
+                            </iframe>
+                        </div>
+                        
+                        <!-- 视频描述 -->
+                        <div class="video-description bg-white p-4 p-md-5">
+                            <div class="row align-items-center">
+                                <div class="col-md-8">
+                                    <h4 class="text-primary mb-3" data-key="video.cta.title">Ready to Elevate Your IT Security?</h4>
+                                    <p class="mb-0" data-key="video.cta.desc">Our team of certified experts is ready to assess your current infrastructure and provide a customized security roadmap. Book your free support today.</p>
+                                </div>
+                                <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                    <a href="#contact" class="btn btn-primary btn-lg px-4" data-key="video.cta.button">
+                                        <i class="bi bi-calendar-check me-2"></i>Free Security Audit
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- 宣传口号 -->
+            <div class="row mt-5 pt-5">
+                <div class="col-12">
+                    <div class="text-center">
+                        <h3 class="text-white mb-4" data-key="video.slogan.title">Our Commitment to Your Security</h3>
+                        
+                        <div class="slogan-container">
+                            <div class="slogan-text display-4 fw-bold text-white mb-3" id="sloganText">
+                                <span class="text-primary">Future-Proof</span> Security. <span class="text-accent-green">Proven</span> Reliability.
+                            </div>
+                            <p class="text-light lead" data-key="video.slogan.subtitle">
+                                Protecting Malaysian businesses with enterprise-grade cybersecurity solutions since 2016
+                            </p>
+                        </div>
+                        
+                        <!-- 旋转口号 -->
+                        <div class="rotating-slogans mt-5">
+                            <div class="d-flex flex-wrap justify-content-center gap-4">
+                                <div class="slogan-chip bg-primary text-white px-4 py-2 rounded-pill" data-key="video.slogans.item1">
+                                    <i class="bi bi-shield-check me-2"></i>Banking-Grade Security
+                                </div>
+                                <div class="slogan-chip bg-accent-green text-white px-4 py-2 rounded-pill" data-key="video.slogans.item2">
+                                    <i class="bi bi-clock-history me-2"></i>Proactive Monitoring
+                                </div>
+                                <div class="slogan-chip bg-secondary text-white px-4 py-2 rounded-pill" data-key="video.slogans.item3">
+                                    <i class="bi bi-people-fill me-2"></i>Dedicated IT Partners
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Services Section -->
+    <section id="services" class="py-5" style="background-color: var(--light-gray);">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-center" data-key="services.title">Enterprise-Level IT Solutions Services</h2>
+                    <p class="lead" data-key="services.subtitle">We provide comprehensive enterprise IT infrastructure design, deployment, maintenance, and optimization services to ensure your business continuity and data security</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto">
+                            <i class="bi bi-server"></i>
+                        </div>
+                        <h4 class="mb-3" data-key="services.item1.title">Private Server Solutions</h4>
+                        <p data-key="services.item1.desc">Deploying high-performance private servers (Domain & Files Server) and accounting servers for enterprises, ensuring data autonomy and control to meet specific business requirements.</p>
+                        <div class="mt-4">
+                            <span class="badge bg-primary" data-key="services.item1.tag1">Advertising Server</span>
+                            <span class="badge bg-primary ms-1" data-key="services.item1.tag2">Accounting Server</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto">
+                            <i class="bi bi-shield-lock"></i>
+                        </div>
+                        <h4 class="mb-3" data-key="services.item2.title">Network Security Architecture</h4>
+                        <p data-key="services.item2.desc">Enterprise firewall deployment and configuration, VLAN network design and segregation, wireless network security hardening to prevent unauthorized access and data breaches.</p>
+                        <div class="mt-4">
+                            <span class="badge bg-success" data-key="services.item2.tag1">Firewall</span>
+                            <span class="badge bg-success ms-1" data-key="services.item2.tag2">VLAN Segregation</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto">
+                            <i class="bi bi-hdd-stack"></i>
+                        </div>
+                        <h4 class="mb-3" data-key="services.item3.title">Data Protection & Disaster Recovery</h4>
+                        <p data-key="services.item3.desc">Automated data backup system design, disaster recovery planning, ensuring business continuity, achieving RTO/RPO objectives, preventing data loss risks.</p>
+                        <div class="mt-4">
+                            <span class="badge bg-warning" data-key="services.item3.tag1">Data Backup</span>
+                            <span class="badge bg-warning ms-1" data-key="services.item3.tag2">Disaster Recovery</span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="col-md-6 col-lg-3" data-aos="fade-up" data-aos-delay="400">
+                    <div class="service-card text-center">
+                        <div class="service-icon mx-auto">
+                            <i class="bi bi-headset"></i>
+                        </div>
+                        <h4 class="mb-3" data-key="services.item4.title">Professional IT Support & Maintenance</h4>
+                        <p data-key="services.item4.desc">Network problem diagnosis and repair, system troubleshooting, hardware maintenance, software installation and configuration, providing continuous technical support services.</p>
+                        <div class="mt-4">
+                            <span class="badge bg-info" data-key="services.item4.tag1">Technical Support</span>
+                            <span class="badge bg-info ms-1" data-key="services.item4.tag2">System Maintenance</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Expertise Section -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="bg-white rounded-3 p-4 p-md-5 shadow-sm">
+                        <div class="row align-items-center">
+                            <div class="col-md-8">
+                                <h4 class="mb-3" data-key="services.expertise.title">Customized Enterprise IT Architecture Design</h4>
+                                <p class="mb-0" data-key="services.expertise.desc">We deeply understand each enterprise's unique needs, providing tailor-made IT solutions. From initial assessment to design, implementation, and continuous optimization, we ensure your technology infrastructure supports business growth while defending against security threats.</p>
+                            </div>
+                            <div class="col-md-4 text-md-end mt-3 mt-md-0">
+                                <a href="#contact" class="btn btn-primary btn-lg px-4" data-key="services.expertise.cta">
+                                    <i class="bi bi-calendar-check me-2"></i>Schedule Architecture Assessment
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Stats Section -->
+    <section class="stats-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up">
+                    <div class="stat-number">30+</div>
+                    <p class="text-light" data-key="stats.item1">Enterprises Served</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="stat-number">100%</div>
+                    <p class="text-light" data-key="stats.item2">Client Satisfaction</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="stat-number">10+</div>
+                    <p class="text-light" data-key="stats.item3">Years of Professional Experience</p>
+                </div>
+                <div class="col-md-3 col-6 mb-4" data-aos="fade-up" data-aos-delay="300">
+                    <div class="stat-number">2H</div>
+                    <p class="text-light" data-key="stats.item4">Rapid Response Time</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- About Us -->
+    <section id="about" class="py-5">
+        <div class="container py-5">
+            <div class="row align-items-center">
+                <div class="col-lg-6 mb-5 mb-lg-0" data-aos="fade-right">
+                    <h2 class="section-title" data-key="about.title">About Future Mystic Tech</h2>
+                    <p class="lead mb-4" data-key="about.subtitle">Future Mystic Tech Enterprise is a Malaysia-based enterprise-level IT infrastructure and cybersecurity solutions provider. We specialize in building secure, reliable, and scalable technological environments for small and medium enterprises, facilitating digital transformation.</p>
+                    
+                    <div class="mb-4">
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i><span data-key="about.expertise.title">Our Areas of Expertise</span></h5>
+                        <p data-key="about.expertise.desc">We specialize in enterprise network architecture design, network security protection, private server deployment, data backup and disaster recovery, and comprehensive IT infrastructure management. Our team possesses extensive industry experience, capable of providing technology solutions aligned with best practices.</p>
+                    </div>
+                    
+                    <div class="mb-4">
+                        <h5><i class="bi bi-check-circle-fill text-success me-2"></i><span data-key="about.tech.title">Technical Expertise & Certifications</span></h5>
+                        <ul class="list-unstyled">
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item1">Enterprise Network Architecture Design & Optimization</span></li>
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item2">Cybersecurity Threat Analysis & Protection</span></li>
+                            <li class="mb-2"><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item3">Server Virtualization & Private Cloud Deployment</span></li>
+                            <li><i class="bi bi-arrow-right-circle text-primary me-2"></i><span data-key="about.tech.item4">Business Continuity Planning & Disaster Recovery</span></li>
+                        </ul>
+                    </div>
+                </div>
+                
+                <div class="col-lg-6" data-aos="fade-left">
+                    <div class="team-card">
+                        <img src="imgs/Myself.jpg" alt="Leon Chan - Founder" class="img-fluid w-100" style="object-fit: cover; max-height: 600px;">
+                            
+                        
+                        <div class="p-4">
+                            <h4 data-key="about.team.name">Leon Chan</h4>
+                            <p class="text-primary fw-bold" data-key="about.team.role">Founder & Chief Technology Consultant</p>
+                            <p data-key="about.team.desc">"With over 10 years of experience in enterprise network architecture and cybersecurity implementation, I deeply understand the technical challenges and security threats SMEs face during digital transformation. We not only provide technical solutions but also commit to becoming our clients' long-term trusted technology partners, ensuring your IT infrastructure supports business growth while defending against increasingly complex network threats."</p>
+                            
+                            <div class="d-flex flex-wrap gap-2 mt-4">
+                                <span class="badge bg-secondary" data-key="about.team.tag1">Enterprise Network Expert</span>
+                                <span class="badge bg-secondary" data-key="about.team.tag2">Cybersecurity Advisor</span>
+                                <span class="badge bg-secondary" data-key="about.team.tag3">IT Architecture Designer</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Features -->
+            <div class="row mt-5 pt-5">
+                <div class="col-12 text-center mb-5">
+                    <h2 class="section-title text-center" data-key="about.features.title">Our Service Features</h2>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up">
+                    <div class="expertise-card">
+                        <div class="text-center mb-4">
+                            <div class="bg-primary bg-opacity-10 rounded-circle d-inline-flex p-4">
+                                <i class="bi bi-diagram-3 text-primary fs-1"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center mb-3" data-key="about.features.item1.title">End-to-End Solutions</h4>
+                        <p data-key="about.features.item1.desc">From requirement analysis, solution design, implementation deployment to continuous maintenance, we provide one-stop IT services, ensuring every phase complies with enterprise standards and best practices.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="100">
+                    <div class="expertise-card">
+                        <div class="text-center mb-4">
+                            <div class="bg-success bg-opacity-10 rounded-circle d-inline-flex p-4">
+                                <i class="bi bi-shield-check text-success fs-1"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center mb-3" data-key="about.features.item2.title">Security Compliance</h4>
+                        <p data-key="about.features.item2.desc">Our solutions adhere to industry security standards and compliance requirements, ensuring enterprise data processing and network communication comply with relevant regulations, reducing compliance risks.</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-4 mb-4" data-aos="fade-up" data-aos-delay="200">
+                    <div class="expertise-card">
+                        <div class="text-center mb-4">
+                            <div class="bg-warning bg-opacity-10 rounded-circle d-inline-flex p-4">
+                                <i class="bi bi-graph-up text-warning fs-1"></i>
+                            </div>
+                        </div>
+                        <h4 class="text-center mb-3" data-key="about.features.item3.title">Scalable Architecture</h4>
+                        <p data-key="about.features.item3.desc">We design IT infrastructure with high scalability, capable of flexible expansion as your business grows, protecting your long-term investment.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- CTA Section -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="row text-center">
+                <div class="col-lg-8 mx-auto">
+                    <h2 class="mb-4" data-key="cta.title">Get a Free Enterprise Cybersecurity Support</h2>
+                    <p class="mb-5 fs-5" data-key="cta.subtitle">Our experts will comprehensively analyze your current network architecture, identify potential security risks, and provide customized hardening solutions and optimization recommendations.</p>
+                    <div class="d-flex flex-column flex-md-row justify-content-center gap-3">
+                        <a href="tel:0128772713" class="btn btn-light btn-lg px-5" data-key="cta.phone">
+                            <i class="bi bi-telephone me-2"></i>Call for Consultation
+                        </a>
+                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-outline-light btn-lg px-5" data-key="cta.email">
+                            <i class="bi bi-envelope me-2"></i>Send Email
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+    <!-- Contact Section - 已修改添加地址 -->
+    <section id="contact" class="py-5">
+        <div class="container py-5">
+            <div class="row mb-5">
+                <div class="col-lg-8 mx-auto text-center">
+                    <h2 class="section-title text-center" data-key="contact.title">Contact Us</h2>
+                    <p class="lead" data-key="contact.subtitle">Get Professional Enterprise IT Solutions Consultation & Support</p>
+                </div>
+            </div>
+            
+            <div class="row g-4">
+                <div class="col-md-3" data-aos="fade-up">
+                    <div class="contact-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-primary rounded-circle p-3 me-3">
+                                <i class="bi bi-telephone text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0" data-key="contact.phone.title">Phone Contact</h4>
+                            </div>
+                        </div>
+                        <p class="fw-bold fs-3 text-primary mb-1">
+                            <a href="tel:0128772713" style="color: inherit; text-decoration: none;">012-877 2713</a>
+                        </p>
+                        <p><span class="hours-badge" data-key="contact.phone.hours">Working Hours</span></p>
+                        <p data-key="contact.phone.schedule">Monday - Friday 9:00am - 6:00pm</p>
+                        <p class="text-muted"><em data-key="contact.phone.note">24-hour emergency response support available</em></p>
+                        <a href="tel:0128772713" class="btn btn-primary mt-3 w-100" data-key="contact.phone.cta">
+                            <i class="bi bi-telephone me-2"></i>Call Now
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="100">
+                    <div class="contact-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-success rounded-circle p-3 me-3">
+                                <i class="bi bi-whatsapp text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0" data-key="contact.whatsapp.title">WhatsApp</h4>
+                            </div>
+                        </div>
+                        <p class="mb-3" data-key="contact.whatsapp.desc">Click the button below to start a conversation directly. We typically respond within 5 minutes.</p>
+                        <a href="https://wa.me/60128772713" class="btn btn-success w-100" target="_blank" data-key="contact.whatsapp.cta">
+                            <i class="bi bi-whatsapp me-2"></i>Send WhatsApp Message
+                        </a>
+                        <p class="mt-3 text-muted" data-key="contact.whatsapp.note">Suitable for non-urgent inquiries and technical discussions</p>
+                    </div>
+                </div>
+                
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="200">
+                    <div class="contact-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-warning rounded-circle p-3 me-3">
+                                <i class="bi bi-envelope text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0" data-key="contact.email.title">Email</h4>
+                            </div>
+                        </div>
+                        <p class="fw-bold" data-key="contact.email.subtitle">Professional Consultation & Technical Proposal:</p>
+                        <p class="mb-3" data-key="contact.email.desc">Send detailed requirements to our professional email, and we will prepare a customized technical solution for you.</p>
+                        <a href="mailto:futuremystictech@gmail.com" class="btn btn-warning w-100" data-key="contact.email.cta">
+                            <i class="bi bi-envelope me-2"></i>futuremystictech@gmail.com
+                        </a>
+                    </div>
+                </div>
+                
+                <!-- 新增的地址卡片 -->
+                <div class="col-md-3" data-aos="fade-up" data-aos-delay="300">
+                    <div class="contact-card">
+                        <div class="d-flex align-items-center mb-3">
+                            <div class="bg-info rounded-circle p-3 me-3">
+                                <i class="bi bi-geo-alt text-white fs-4"></i>
+                            </div>
+                            <div>
+                                <h4 class="mb-0" data-key="contact.address.title">Office Address</h4>
+                            </div>
+                        </div>
+                        <div class="mb-3">
+                            <p class="fw-bold mb-1">Future Mystic Tech Enterprise</p>
+                            <p class="mb-1">B-09-3A, Level 9, Tower B</p>
+                            <p class="mb-1">Pusat Perdagangan Dataran Atwater</p>
+                            <p class="mb-1">Jalan Profesor Diraja Ungku Aziz</p>
+                            <p class="mb-1">46200 Petaling Jaya</p>
+                            <p class="mb-0">Selangor, Malaysia</p>
+                        </div>
+                        <a href="https://maps.app.goo.gl/atWbtYXqM5HGmFP96" target="_blank" class="btn btn-info w-100" data-key="contact.address.cta">
+                            <i class="bi bi-map me-2"></i>View on Google Maps
+                        </a>
+                        <p class="mt-3 text-muted" data-key="contact.address.note">Available for scheduled meetings</p>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Service Area Information -->
+            <div class="row mt-5">
+                <div class="col-12">
+                    <div class="bg-white rounded-3 shadow p-4 p-md-5">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <h4 class="mb-3" data-key="contact.area.title">Service Area & Office Location</h4>
+                                <p data-key="contact.area.subtitle">We are located in Petaling Jaya with primary on-site services covering:</p>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-building text-primary me-2"></i><strong>Office Address:</strong><br>B-09-3A, Level 9, Tower B, Pusat Perdagangan Dataran Atwater,<br>Jalan Profesor Diraja Ungku Aziz, 46200 Petaling Jaya, Selangor</li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item1">Klang Valley Area</span></li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item2">Kuala Lumpur & Petaling Jaya</span></li>
+                                    <li class="mb-2"><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item3">Selangor State</span></li>
+                                    <li><i class="bi bi-geo-alt text-primary me-2"></i><span data-key="contact.area.item4">Remote support available nationwide</span></li>
+                                </ul>
+                            </div>
+                            <div class="col-md-6">
+                                <h4 class="mb-3" data-key="contact.response.title">Service Response Time</h4>
+                                <ul class="list-unstyled">
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item1.title">During Working Hours:</strong> <span data-key="contact.response.item1.desc">Response within 2 hours</span></li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item2.title">Non-Working Hours:</strong> <span data-key="contact.response.item2.desc">Response before 9am the next day</span></li>
+                                    <li class="mb-2"><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item3.title">Critical Failures:</strong> <span data-key="contact.response.item3.desc">24/7 Emergency Support</span></li>
+                                    <li><i class="bi bi-check-circle text-success me-2"></i><strong data-key="contact.response.item4.title">On-site Service:</strong> <span data-key="contact.response.item4.desc">Scheduled based on distance</span></li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer - 已修改添加地址 -->
+    <footer class="footer">
+        <div class="container">
+            <div class="row g-4">
+                <div class="col-lg-4 mb-4">
+                    <h3 class="mb-4">
+                        <img src="imgs/Future Mystic Tech Enterprise Logo.png" alt="Future Mystic Tech Enterprise Logo" height="50" class="me-2"> Future Mystic Tech Enterprise
+                    </h3>
+                    <p data-key="footer.desc">Enterprise-level cybersecurity and IT infrastructure solutions specialists, committed to building secure, reliable, and efficient digital environments for SMEs in Malaysia.</p>
+                    <div class="social-icons mt-4">
+                        <a href="https://wa.me/60128772713" target="_blank" title="WhatsApp">
+                            <i class="bi bi-whatsapp"></i>
+                        </a>
+                        <a href="tel:0128772713" title="Phone" onclick="return confirm('Are you sure you want to make a call?');">
+                            <i class="bi bi-telephone"></i>
+                        </a>
+                        <a href="mailto:futuremystictech@gmail.com" title="Send Email">
+                            <i class="bi bi-envelope"></i>
+                        </a>
+                        <a href="#" title="Facebook">
+                            <i class="bi bi-facebook"></i>
+                        </a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-2 col-md-6 mb-4">
+                    <h4 class="mb-4" data-key="footer.links.title">Quick Links</h4>
+                    <div class="footer-links">
+                        <a href="#home" data-key="footer.links.home">Home</a>
+                        <a href="#services" data-key="footer.links.services">Professional Services</a>
+                        <a href="#about" data-key="footer.links.about">About Us</a>
+                        <a href="#contact" data-key="footer.links.contact">Contact Us</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 col-md-6 mb-4">
+                    <h4 class="mb-4" data-key="footer.services.title">Core Services</h4>
+                    <div class="footer-links">
+                        <a href="#services" data-key="footer.services.item1">Private Server Solutions</a>
+                        <a href="#services" data-key="footer.services.item2">Network Security Architecture Design</a>
+                        <a href="#services" data-key="footer.services.item3">Data Protection & Disaster Recovery</a>
+                        <a href="#services" data-key="footer.services.item4">Enterprise Network Optimization</a>
+                        <a href="#services" data-key="footer.services.item5">Professional IT Support Services</a>
+                    </div>
+                </div>
+                
+                <div class="col-lg-3 mb-4">
+                    <h4 class="mb-4" data-key="footer.contact.title">Contact Information</h4>
+                    <div class="footer-links">
+                        <p><i class="bi bi-geo-alt me-2"></i> 
+                            <span>B-09-3A, Level 9, Tower B,<br>
+                            Pusat Perdagangan Dataran Atwater,<br>
+                            46200 Petaling Jaya, Selangor</span>
+                        </p>
+                        <p><i class="bi bi-telephone me-2"></i> 
+                            <a href="tel:0128772713" class="text-white">012-877 2713</a>
+                        </p>
+                        <p><i class="bi bi-whatsapp me-2"></i> 
+                            <a href="https://wa.me/60128772713" target="_blank" class="text-white">WhatsApp: 012-877 2713</a>
+                        </p>
+                        <p><i class="bi bi-envelope me-2"></i> 
+                            <a href="mailto:futuremystictech@gmail.com" class="text-white">futuremystictech@gmail.com</a>
+                        </p>
+                        <p><i class="bi bi-clock me-2"></i> <span data-key="footer.contact.hours">Working Hours: Monday - Friday 9:00am - 6:00pm</span></p>
+                        <p><i class="bi bi-lightning me-2"></i> <span data-key="footer.contact.emergency">Emergency Support: 24/7 Emergency Response</span></p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="border-top border-secondary pt-4 mt-4 text-center">
+                <p class="text-light mb-0" data-key="footer.copyright">&copy; 2026 Future Mystic Tech Enterprise. All right reserved.</p>
+                <br><br>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Bootstrap JS Bundle with Popper -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    
+    <!-- AOS Animation -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    
+    <script>
+        // Initialize AOS Animation
+        AOS.init({
+            duration: 1000,
+            once: true,
+            offset: 100
+        });
+        
+        // Navigation Bar Scroll Effect
+        window.addEventListener('scroll', function() {
+            const navbar = document.querySelector('.navbar');
+            if (window.scrollY > 100) {
+                navbar.classList.add('shadow');
+            } else {
+                navbar.classList.remove('shadow');
+            }
+        });
+        
+        // Smooth Scrolling
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                
+                const targetId = this.getAttribute('href');
+                if(targetId === '#') return;
+                
+                const targetElement = document.querySelector(targetId);
+                if(targetElement) {
+                    window.scrollTo({
+                        top: targetElement.offsetTop - 80,
+                        behavior: 'smooth'
+                    });
+                }
+            });
+        });
+        
+        // Phone Number Click Confirmation
+        document.querySelectorAll('a[href^="tel:"]').forEach(phoneLink => {
+            phoneLink.addEventListener('click', function(e) {
+                if(!confirm('Are you sure you want to call 012-877 2713?')) {
+                    e.preventDefault();
+                }
+            });
+        });
+        
+        // ============ 视频播放功能 - 修正版 ============
+        document.addEventListener('DOMContentLoaded', function() {
+            const playBtn = document.getElementById('playVideoBtn');
+            const videoFrame = document.getElementById('promoVideo');
+            const videoThumbnail = document.getElementById('videoThumbnail');
+            const videoLoading = document.getElementById('videoLoading');
+            
+            if (playBtn && videoFrame) {
+                // 设置YouTube视频URL - Shorts需要特殊处理
+                const youtubeVideoId = 'fRIUtbDC-bE'; // 您的Shorts视频ID
+                
+                // 预加载视频封面
+                const thumbnailUrls = [
+                    `https://img.youtube.com/vi/${youtubeVideoId}/maxresdefault.jpg`,
+                    `https://img.youtube.com/vi/${youtubeVideoId}/sddefault.jpg`,
+                    `https://img.youtube.com/vi/${youtubeVideoId}/hqdefault.jpg`,
+                    `https://images.unsplash.com/photo-1551288049-bebda4e38f71?ixlib=rb-4.0.3&auto=format&fit=crop&w=1920&q=80`
+                ];
+                
+                // 尝试加载最佳质量的封面
+                let currentThumbnailIndex = 0;
+                function loadThumbnail() {
+                    if (currentThumbnailIndex < thumbnailUrls.length) {
+                        const img = new Image();
+                        img.onload = function() {
+                            videoThumbnail.src = this.src;
+                        };
+                        img.onerror = function() {
+                            currentThumbnailIndex++;
+                            loadThumbnail();
+                        };
+                        img.src = thumbnailUrls[currentThumbnailIndex];
+                    }
+                }
+                
+                loadThumbnail();
+                
+                // **关键修正：Shorts视频的嵌入URL**
+                // 对于Shorts，我们使用不同的嵌入方式
+                const shortsEmbedUrl = `https://www.youtube.com/embed/${youtubeVideoId}?rel=0&modestbranding=1&showinfo=0&controls=1`;
+                
+                playBtn.addEventListener('click', function() {
+                    // 显示加载指示器
+                    if (videoLoading) {
+                        videoLoading.classList.remove('d-none');
+                    }
+                    
+                    // 隐藏播放按钮
+                    this.style.display = 'none';
+                    
+                    // 淡出封面
+                    if (videoThumbnail) {
+                        videoThumbnail.classList.add('fade-out');
+                    }
+                    
+                    // 设置iframe的src（**重要：在这里才设置src**）
+                    // 这样可以避免预加载问题
+                    if (!videoFrame.src.includes('youtube.com')) {
+                        videoFrame.src = shortsEmbedUrl + '&autoplay=1';
+                    } else {
+                        // 如果已经有src，则重新加载并自动播放
+                        const separator = videoFrame.src.includes('?') ? '&' : '?';
+                        videoFrame.src = videoFrame.src.split('&autoplay')[0] + separator + 'autoplay=1';
+                    }
+                    
+                    // 显示视频iframe
+                    setTimeout(() => {
+                        videoFrame.classList.remove('d-none');
+                        
+                        // 隐藏加载指示器
+                        if (videoLoading) {
+                            setTimeout(() => {
+                                videoLoading.classList.add('d-none');
+                            }, 1500);
+                        }
+                    }, 300);
+                });
+                
+                // 视频加载完成事件
+                videoFrame.addEventListener('load', function() {
+                    if (videoLoading) {
+                        videoLoading.classList.add('d-none');
+                    }
+                });
+                
+                // 添加错误处理
+                videoFrame.addEventListener('error', function() {
+                    console.log('Video failed to load');
+                    if (videoLoading) {
+                        videoLoading.classList.add('d-none');
+                    }
+                    
+                    // 显示错误信息
+                    alert('Unable to load video. Please check your internet connection and try again.');
+                });
+            }
+            
+            // 口号轮换效果
+            const slogans = [
+                "Future-Proof Security. Proven Reliability.",
+                "Your Trusted IT Security Partner in Malaysia",
+                "Enterprise Protection. SME Accessibility.",
+                "Securing Businesses, Enabling Growth"
+            ];
+            
+            let currentSlogan = 0;
+            const sloganElement = document.getElementById('sloganText');
+            
+            if (sloganElement) {
+                // 初始设置
+                sloganElement.innerHTML = '<span class="text-primary">Future-Proof</span> Security. <span class="text-accent-green">Proven</span> Reliability.';
+                
+                // 每5秒轮换一次
+                setInterval(() => {
+                    currentSlogan = (currentSlogan + 1) % slogans.length;
+                    sloganElement.style.opacity = '0.5';
+                    
+                    setTimeout(() => {
+                        // 根据口号内容添加颜色高亮
+                        let newSlogan = slogans[currentSlogan];
+                        if (newSlogan.includes("Future-Proof")) {
+                            newSlogan = newSlogan.replace("Future-Proof", '<span class="text-primary">Future-Proof</span>');
+                        }
+                        if (newSlogan.includes("Proven")) {
+                            newSlogan = newSlogan.replace("Proven", '<span class="text-accent-green">Proven</span>');
+                        }
+                        if (newSlogan.includes("Enterprise")) {
+                            newSlogan = newSlogan.replace("Enterprise", '<span class="text-primary">Enterprise</span>');
+                        }
+                        if (newSlogan.includes("Trusted")) {
+                            newSlogan = newSlogan.replace("Trusted", '<span class="text-accent-green">Trusted</span>');
+                        }
+                        
+                        sloganElement.innerHTML = newSlogan;
+                        sloganElement.style.opacity = '1';
+                    }, 300);
+                }, 5000);
+            }
+        });
+        
+        // Language Translation Data
+        const translations = {
+            en: {
+                // Navigation
+                "nav.home": "Home",
+                "nav.services": "Services",
+                "nav.about": "About Us",
+                "nav.contact": "Contact",
+                
+                // Hero Section
+                "hero.title": "Enterprise-Level Cybersecurity & IT Infrastructure Specialists",
+                "hero.subtitle": "Future Mystic Tech Enterprise is a leading corporate IT solutions provider in Malaysia, specializing in building secure, reliable, and efficient digital infrastructure for SMEs. We offer end-to-end network security management, private server deployment, data protection, and professional technical support services.",
+                "hero.cta1": "Free Technical Support",
+                "hero.cta2": "Call Now for Consultation",
+                "hero.feature1.title": "Enterprise-Level Security Protection",
+                "hero.feature1.desc": "Utilizing banking-grade security architecture, deploying next-generation firewalls, implementing zero-trust network access policies to comprehensively safeguard corporate data assets.",
+                "hero.feature2.title": "Professional Rapid Response",
+                "hero.feature2.desc": "2-hour rapid response during working hours, priority handling of critical business system failures to minimize business interruption time.",
+                
+                // 视频部分 - 新增
+                "video.title": "Secure Your Business Future with Enterprise-Grade Technology",
+                "video.subtitle": "Watch how we transform enterprise IT infrastructure with security-first solutions",
+                "video.cta.title": "Ready to Elevate Your IT Security?",
+                "video.cta.desc": "Our team of certified experts is ready to assess your current infrastructure and provide a customized security roadmap. Book your free support today.",
+                "video.cta.button": "Free Security Audit",
+                "video.slogan.title": "Our Commitment to Your Security",
+                "video.slogan.subtitle": "Protecting Malaysian businesses with enterprise-grade cybersecurity solutions since 2016",
+                "video.slogans.item1": "Banking-Grade Security",
+                "video.slogans.item2": "24/7 Proactive Monitoring",
+                "video.slogans.item3": "Dedicated IT Partners",
+                
+                // Services Section
+                "services.title": "Enterprise-Level IT Solutions Services",
+                "services.subtitle": "We provide comprehensive enterprise IT infrastructure design, deployment, maintenance, and optimization services to ensure your business continuity and data security",
+                "services.item1.title": "Private Server Solutions",
+                "services.item1.desc": "Deploying high-performance private servers (Domain & Files Server) and accounting servers for enterprises, ensuring data autonomy and control to meet specific business requirements.",
+                "services.item1.tag1": "Advertising Server",
+                "services.item1.tag2": "Accounting Server",
+                "services.item2.title": "Network Security Architecture",
+                "services.item2.desc": "Enterprise firewall deployment and configuration, VLAN network design and segregation, wireless network security hardening to prevent unauthorized access and data breaches.",
+                "services.item2.tag1": "Firewall",
+                "services.item2.tag2": "VLAN Segregation",
+                "services.item3.title": "Data Protection & Disaster Recovery",
+                "services.item3.desc": "Automated data backup system design, disaster recovery planning, ensuring business continuity, achieving RTO/RPO objectives, preventing data loss risks.",
+                "services.item3.tag1": "Data Backup",
+                "services.item3.tag2": "Disaster Recovery",
+                "services.item4.title": "Professional IT Support & Maintenance",
+                "services.item4.desc": "Network problem diagnosis and repair, system troubleshooting, hardware maintenance, software installation and configuration, providing continuous technical support services.",
+                "services.item4.tag1": "Technical Support",
+                "services.item4.tag2": "System Maintenance",
+                "services.expertise.title": "Customized Enterprise IT Architecture Design",
+                "services.expertise.desc": "We deeply understand each enterprise's unique needs, providing tailor-made IT solutions. From initial assessment to design, implementation, and continuous optimization, we ensure your technology infrastructure supports business growth while defending against security threats.",
+                "services.expertise.cta": "Schedule Architecture Assessment",
+                "process.title": "Our Professional Service Process",
+                "process.subtitle": "Assessment → Design → Deployment → Optimization → Ongoing Support",
+                "process.step1": "Assessment",
+                "process.step2": "Design",
+                "process.step3": "Deployment",
+                "process.step4": "Optimization",
+                "process.step5": "Ongoing Support",
+                "process.desc": "We follow a structured enterprise IT service methodology to ensure every solution is secure, scalable, and aligned with business objectives. We act as your long-term IT & cybersecurity partner, not just a service provider.",
+
+                
+                // Stats Section
+                "stats.item1": "Enterprises Served",
+                "stats.item2": "Client Satisfaction",
+                "stats.item3": "Years of Professional Experience",
+                "stats.item4": "Rapid Response Time",
+                
+                // About Section
+                "about.title": "About Future Mystic Tech",
+                "about.subtitle": "Future Mystic Tech Enterprise is a Malaysia-based enterprise-level IT infrastructure and cybersecurity solutions provider. We specialize in building secure, reliable, and scalable technological environments for small and medium enterprises, facilitating digital transformation.",
+                "about.expertise.title": "Our Areas of Expertise",
+                "about.expertise.desc": "We specialize in enterprise network architecture design, network security protection, private server deployment, data backup and disaster recovery, and comprehensive IT infrastructure management. Our team possesses extensive industry experience, capable of providing technology solutions aligned with best practices.",
+                "about.tech.title": "Technical Expertise & Certifications",
+                "about.tech.item1": "Enterprise Network Architecture Design & Optimization",
+                "about.tech.item2": "Cybersecurity Threat Analysis & Protection",
+                "about.tech.item3": "Server Virtualization & Private Cloud Deployment",
+                "about.tech.item4": "Business Continuity Planning & Disaster Recovery",
+                "about.team.name": "Leon Chan",
+                "about.team.role": "Founder & Chief Technology Consultant",
+                "about.team.desc": "\"With over 10 years of experience in enterprise network architecture and cybersecurity implementation, I deeply understand the technical challenges and security threats SMEs face during digital transformation. We not only provide technical solutions but also commit to becoming our clients' long-term trusted technology partners, ensuring your IT infrastructure supports business growth while defending against increasingly complex network threats.\"",
+                "about.team.tag1": "Enterprise Network Expert",
+                "about.team.tag2": "Cybersecurity Advisor",
+                "about.team.tag3": "IT Architecture Designer",
+                "about.features.title": "Our Service Features",
+                "about.features.item1.title": "End-to-End Solutions",
+                "about.features.item1.desc": "From requirement analysis, solution design, implementation deployment to continuous maintenance, we provide one-stop IT services, ensuring every phase complies with enterprise standards and best practices.",
+                "about.features.item2.title": "Security Compliance",
+                "about.features.item2.desc": "Our solutions adhere to industry security standards and compliance requirements, ensuring enterprise data processing and network communication comply with relevant regulations, reducing compliance risks.",
+                "about.features.item3.title": "Scalable Architecture",
+                "about.features.item3.desc": "We design IT infrastructure with high scalability, capable of flexible expansion as your business grows, protecting your long-term investment.",
+                
+                // CTA Section
+                "cta.title": "Get a Free Enterprise Cybersecurity Support",
+                "cta.subtitle": "Our experts will comprehensively analyze your current network architecture, identify potential security risks, and provide customized hardening solutions and optimization recommendations.",
+                "cta.phone": "Call for Consultation",
+                "cta.email": "Send Email",
+                "why.title": "Why Enterprises Choose Future Mystic Tech",
+                "why.item1": "Consultant-Led Approach, Not Just Technical Support",
+                "why.item2": "Enterprise-Level Security Mindset",
+                "why.item3": "SME-Focused, Cost-Effective Solutions",
+                "why.item4": "Clear Communication & Transparent Recommendations",
+                "why.item5": "Long-Term Partnership, Not One-Time Fix",
+                "case.title": "Real-World Enterprise Scenarios We Handle",
+                "case1.title": "SME Facing Ransomware Risks",
+                "case1.desc": "Firewall hardening, VLAN segregation, and structured backup strategy implementation resulted in zero security incidents and improved network stability.",
+                "case2.title": "Accounting Firm with Compliance Requirements",
+                "case2.desc": "Private file server deployment with access control and audit-ready backup enabled secure remote access with full data ownership.",
+
+
+                
+                // Contact Section - 新增地址翻译
+                "contact.title": "Contact Us",
+                "contact.subtitle": "Get Professional Enterprise IT Solutions Consultation & Support",
+                "contact.phone.title": "Phone Contact",
+                "contact.phone.hours": "Working Hours",
+                "contact.phone.schedule": "Monday - Friday 9:00am - 6:00pm",
+                "contact.phone.note": "24-hour emergency response support available",
+                "contact.phone.cta": "Call Now",
+                "contact.whatsapp.title": "WhatsApp",
+                "contact.whatsapp.desc": "Click the button below to start a conversation directly. We typically respond within 5 minutes.",
+                "contact.whatsapp.cta": "Send WhatsApp Message",
+                "contact.whatsapp.note": "Suitable for non-urgent inquiries and technical discussions",
+                "contact.email.title": "Email",
+                "contact.email.subtitle": "Professional Consultation & Technical Proposal:",
+                "contact.email.desc": "Send detailed requirements to our professional email, and we will prepare a customized technical solution for you.",
+                "contact.email.cta": "futuremystictech@gmail.com",
+                "contact.address.title": "Office Address",
+                "contact.address.cta": "View on Google Maps",
+                "contact.address.note": "Available for scheduled meetings",
+                "contact.area.title": "Service Area & Office Location",
+                "contact.area.subtitle": "We are located in Petaling Jaya with primary on-site services covering:",
+                "contact.area.item1": "Klang Valley Area",
+                "contact.area.item2": "Kuala Lumpur & Petaling Jaya",
+                "contact.area.item3": "Selangor State",
+                "contact.area.item4": "Remote support available nationwide",
+                "contact.response.title": "Service Response Time",
+                "contact.response.item1.title": "During Working Hours:",
+                "contact.response.item1.desc": "Response within 2 hours",
+                "contact.response.item2.title": "Non-Working Hours:",
+                "contact.response.item2.desc": "Response before 9am the next day",
+                "contact.response.item3.title": "Critical Failures:",
+                "contact.response.item3.desc": "24/7 Emergency Support",
+                "contact.response.item4.title": "On-site Service:",
+                "contact.response.item4.desc": "Scheduled based on distance",
+                
+                // Footer
+                "footer.desc": "Enterprise-level cybersecurity and IT infrastructure solutions specialists, committed to building secure, reliable, and efficient digital environments for SMEs in Malaysia.",
+                "footer.links.title": "Quick Links",
+                "footer.links.home": "Home",
+                "footer.links.services": "Professional Services",
+                "footer.links.about": "About Us",
+                "footer.links.contact": "Contact Us",
+                "footer.services.title": "Core Services",
+                "footer.services.item1": "Private Server Solutions",
+                "footer.services.item2": "Network Security Architecture Design",
+                "footer.services.item3": "Data Protection & Disaster Recovery",
+                "footer.services.item4": "Enterprise Network Optimization",
+                "footer.services.item5": "Professional IT Support Services",
+                "footer.contact.title": "Contact Information",
+                "footer.contact.hours": "Working Hours: Monday - Friday 9:00am - 6:00pm",
+                "footer.contact.emergency": "Emergency Support: 24/7 Emergency Response",
+                "footer.copyright": "© 2026 Future Mystic Tech Enterprise. All right reserved."
+            },
+            cn: {
+                // Navigation
+                "nav.home": "首页",
+                "nav.services": "专业服务",
+                "nav.about": "关于我们",
+                "nav.contact": "联系我们",
+                
+                // Hero Section
+                "hero.title": "企业级网络安全与IT基础设施专家",
+                "hero.subtitle": "未来神秘科技企业是马来西亚领先的企业IT解决方案提供商，专门为中小型企业构建安全、可靠和高效的数字化基础设施。我们提供端到端的网络安全管理、私有服务器部署、数据保护和专业技术支持服务。",
+                "hero.cta1": "免费技术支持",
+                "hero.cta2": "立即致电咨询",
+                "hero.feature1.title": "企业级安全防护",
+                "hero.feature1.desc": "采用银行级安全架构，部署下一代防火墙，实施零信任网络访问策略，全面保障企业数据资产安全。",
+                "hero.feature2.title": "专业快速响应",
+                "hero.feature2.desc": "工作时间2小时快速响应，优先处理关键业务系统故障，最大限度减少业务中断时间。",
+                
+                // 视频部分 - 新增
+                "video.title": "用企业级技术保障您的业务未来",
+                "video.subtitle": "观看我们如何用安全优先的解决方案改造企业IT基础设施",
+                "video.cta.title": "准备提升您的IT安全等级？",
+                "video.cta.desc": "我们的认证专家团队随时准备评估您当前的基础设施，并提供定制的安全路线图。立即预约免费技术支持。",
+                "video.cta.button": "免费安全审计",
+                "video.slogan.title": "我们对您安全的承诺",
+                "video.slogan.subtitle": "自2016年起，用企业级网络安全解决方案保护马来西亚企业",
+                "video.slogans.item1": "银行级安全防护",
+                "video.slogans.item2": "主动监控",
+                "video.slogans.item3": "专属IT合作伙伴",
+                
+                // Services Section
+                "services.title": "企业级IT解决方案服务",
+                "services.subtitle": "我们提供全面的企业IT基础设施设计、部署、维护和优化服务，确保您的业务连续性和数据安全",
+                "services.item1.title": "私有服务器解决方案",
+                "services.item1.desc": "为企业部署高性能私有服务器（域服务器和文件服务器）和会计服务器，确保数据自主可控，满足特定业务需求。",
+                "services.item1.tag1": "广告服务器",
+                "services.item1.tag2": "会计服务器",
+                "services.item2.title": "网络安全架构设计",
+                "services.item2.desc": "企业防火墙部署与配置，VLAN网络设计与隔离，无线网络安全加固，防止未经授权的访问和数据泄露。",
+                "services.item2.tag1": "防火墙",
+                "services.item2.tag2": "VLAN隔离",
+                "services.item3.title": "数据保护与灾难恢复",
+                "services.item3.desc": "自动化数据备份系统设计，灾难恢复规划，确保业务连续性，实现RTO/RPO目标，预防数据丢失风险。",
+                "services.item3.tag1": "数据备份",
+                "services.item3.tag2": "灾难恢复",
+                "services.item4.title": "专业IT支持与维护",
+                "services.item4.desc": "网络问题诊断与修复，系统故障排除，硬件维护，软件安装与配置，提供持续技术支援服务。",
+                "services.item4.tag1": "技术支持",
+                "services.item4.tag2": "系统维护",
+                "services.expertise.title": "定制化企业IT架构设计",
+                "services.expertise.desc": "我们深入了解每家企业的独特需求，提供量身定制的IT解决方案。从初步评估、设计、实施部署到持续优化，确保您的技术基础设施既能支持业务增长，又能抵御安全威胁。",
+                "services.expertise.cta": "安排架构评估",
+                "process.title": "我们的专业服务流程",
+                "process.subtitle": "评估 → 设计 → 部署 → 优化 → 持续支持",
+                "process.step1": "评估",
+                "process.step2": "设计",
+                "process.step3": "部署",
+                "process.step4": "优化",
+                "process.step5": "持续支持",
+                "process.desc": "我们采用结构化的企业级 IT 服务流程，确保每一套解决方案在安全性、可扩展性与业务匹配度方面达到最佳状态。我们不仅提供技术服务，更成为您长期信赖的 IT 与网络安全顾问。",
+
+                
+                // Stats Section
+                "stats.item1": "服务企业",
+                "stats.item2": "客户满意度",
+                "stats.item3": "专业经验年限",
+                "stats.item4": "快速响应时间",
+                
+                // About Section
+                "about.title": "关于未来神秘科技",
+                "about.subtitle": "未来神秘科技企业是马来西亚本土的企业级IT基础设施和网络安全解决方案提供商。我们专注于为中小型企业构建安全、可靠和可扩展的技术环境，推动数字化转型。",
+                "about.expertise.title": "我们的专业领域",
+                "about.expertise.desc": "我们专注于企业网络架构设计、网络安全防护、私有服务器部署、数据备份与灾难恢复以及全面的IT基础设施管理。我们的团队拥有丰富的行业经验，能够提供符合最佳实践的技术解决方案。",
+                "about.tech.title": "专业技术与认证",
+                "about.tech.item1": "企业网络架构设计与优化",
+                "about.tech.item2": "网络安全威胁分析与防护",
+                "about.tech.item3": "服务器虚拟化与私有云部署",
+                "about.tech.item4": "业务连续性规划与灾难恢复",
+                "about.team.name": "陈先生",
+                "about.team.role": "创始人兼首席技术顾问",
+                "about.team.desc": "“拥有超过10年的企业网络架构和网络安全实施经验，我深刻理解中小型企业在数字化转型过程中面临的技术挑战和安全威胁。我们不仅提供技术解决方案，更致力于成为客户长期信赖的技术合作伙伴，确保您的IT基础设施既能支持业务增长，又能抵御日益复杂的网络威胁。”",
+                "about.team.tag1": "企业网络专家",
+                "about.team.tag2": "网络安全顾问",
+                "about.team.tag3": "IT架构设计师",
+                "about.features.title": "我们的服务特点",
+                "about.features.item1.title": "端到端解决方案",
+                "about.features.item1.desc": "从需求分析、方案设计、实施部署到持续维护，我们提供一站式IT服务，确保每个环节都符合企业标准与最佳实践。",
+                "about.features.item2.title": "安全合规性",
+                "about.features.item2.desc": "我们的解决方案遵循行业安全标准和合规要求，确保企业数据处理和网络通信符合相关法规，降低合规风险。",
+                "about.features.item3.title": "可扩展架构",
+                "about.features.item3.desc": "我们设计具有高度可扩展性的IT基础设施，能够随着业务增长灵活扩展，保护您的长期投资。",
+                
+                // CTA Section
+                "cta.title": "获取免费企业网络安全支持",
+                "cta.subtitle": "我们的专家将全面分析您当前的网络架构，识别潜在安全风险，并提供定制化的加固解决方案和优化建议。",
+                "cta.phone": "致电咨询",
+                "cta.email": "发送邮件",
+                "why.title": "为什么企业选择未来神秘科技",
+                "why.item1": "顾问主导，而非单纯技术支援",
+                "why.item2": "企业级安全思维与实施经验",
+                "why.item3": "专注中小企业，方案务实可落地",
+                "why.item4": "沟通清晰，建议透明",
+                "why.item5": "长期技术伙伴，而非一次性服务",
+                "case.title": "我们实际处理的企业场景",
+                "case1.title": "中小企业面临勒索软件风险",
+                "case1.desc": "通过防火墙加固、VLAN 网络隔离与结构化备份策略，实现零安全事故并显著提升网络稳定性。",
+                "case2.title": "需要合规与安全存取的会计事务所",
+                "case2.desc": "部署私有文件服务器、权限控管与审计级备份，实现安全远程办公与数据完全自主。",
+
+
+                
+                // Contact Section - 新增地址翻译
+                "contact.title": "联系我们",
+                "contact.subtitle": "获取专业企业IT解决方案咨询与支持",
+                "contact.phone.title": "电话联系",
+                "contact.phone.hours": "工作时间",
+                "contact.phone.schedule": "周一至周五 上午9:00 - 下午6:00",
+                "contact.phone.note": "提供24小时紧急响应支持",
+                "contact.phone.cta": "立即致电",
+                "contact.whatsapp.title": "WhatsApp",
+                "contact.whatsapp.desc": "点击下方按钮直接开始对话。我们通常会在5分钟内回复。",
+                "contact.whatsapp.cta": "发送WhatsApp消息",
+                "contact.whatsapp.note": "适用于非紧急咨询和技术讨论",
+                "contact.email.title": "电子邮件",
+                "contact.email.subtitle": "专业咨询与技术方案：",
+                "contact.email.desc": "将详细需求发送至我们的专业邮箱，我们将为您准备定制的技术解决方案。",
+                "contact.email.cta": "futuremystictech@gmail.com",
+                "contact.address.title": "办公地址",
+                "contact.address.cta": "在Google地图查看",
+                "contact.address.note": "可预约会议",
+                "contact.area.title": "服务区域与办公地址",
+                "contact.area.subtitle": "我们位于八打灵再也，主要现场服务覆盖：",
+                "contact.area.item1": "巴生谷地区",
+                "contact.area.item2": "吉隆坡与八打灵再也",
+                "contact.area.item3": "雪兰莪州",
+                "contact.area.item4": "全国范围内提供远程支持",
+                "contact.response.title": "服务响应时间",
+                "contact.response.item1.title": "工作时间：",
+                "contact.response.item1.desc": "2小时内响应",
+                "contact.response.item2.title": "非工作时间：",
+                "contact.response.item2.desc": "次日上午9点前响应",
+                "contact.response.item3.title": "关键故障：",
+                "contact.response.item3.desc": "24/7紧急支持",
+                "contact.response.item4.title": "现场服务：",
+                "contact.response.item4.desc": "根据距离安排时间",
+                
+                // Footer
+                "footer.desc": "企业级网络安全和IT基础设施解决方案专家，致力于为马来西亚中小型企业构建安全、可靠和高效的数字化环境。",
+                "footer.links.title": "快速链接",
+                "footer.links.home": "首页",
+                "footer.links.services": "专业服务",
+                "footer.links.about": "关于我们",
+                "footer.links.contact": "联系我们",
+                "footer.services.title": "核心服务",
+                "footer.services.item1": "私有服务器解决方案",
+                "footer.services.item2": "网络安全架构设计",
+                "footer.services.item3": "数据保护与灾难恢复",
+                "footer.services.item4": "企业网络优化",
+                "footer.services.item5": "专业IT支持服务",
+                "footer.contact.title": "联系信息",
+                "footer.contact.hours": "工作时间：周一至周五 上午9:00 - 下午6:00",
+                "footer.contact.emergency": "紧急支持：24/7紧急响应",
+                "footer.copyright": "© 2026 未来神秘科技企业。版权所有。"
+            }
+        };
+        
+        // Language Switcher Functionality
+        let currentLang = 'en';
+        
+        function switchLanguage(lang) {
+            if (lang === currentLang) return;
+            
+            // Update active button
+            document.getElementById('lang-en-btn').classList.toggle('active', lang === 'en');
+            document.getElementById('lang-cn-btn').classList.toggle('active', lang === 'cn');
+            
+            // Update body class for language-specific styles
+            document.body.classList.remove('lang-en', 'lang-cn');
+            document.body.classList.add(`lang-${lang}`);
+            
+            // Update all translatable elements
+            const elements = document.querySelectorAll('[data-key]');
+            elements.forEach(element => {
+                const key = element.getAttribute('data-key');
+                if (translations[lang][key]) {
+                    if (element.tagName === 'INPUT' || element.tagName === 'TEXTAREA') {
+                        element.value = translations[lang][key];
+                    } else {
+                        element.textContent = translations[lang][key];
+                    }
+                }
+            });
+            
+            // Update HTML lang attribute
+            document.documentElement.lang = lang === 'cn' ? 'zh-CN' : 'en';
+            
+            currentLang = lang;
+            
+            // Store language preference in localStorage
+            localStorage.setItem('preferredLanguage', lang);
+        }
+        
+        // Language Switcher Event Listeners
+        document.getElementById('lang-en-btn').addEventListener('click', () => switchLanguage('en'));
+        document.getElementById('lang-cn-btn').addEventListener('click', () => switchLanguage('cn'));
+        
+        // Check for saved language preference
+        const savedLang = localStorage.getItem('preferredLanguage');
+        if (savedLang && (savedLang === 'en' || savedLang === 'cn')) {
+            switchLanguage(savedLang);
+        }
+    </script>
+</body>
+</html>
